@@ -135,7 +135,12 @@
        ;;nix               ; I hereby declare "nix geht mehr!"
        (ocaml +lsp)            ; an objective camel
        (org              ; organize your plain life in plain text
+        +attach
         +dragndrop       ; drag & drop files/images into org buffers
+        +hugo
+        +capture
+        +habit
+        +pomodoro
         +ipython         ; ipython/jupyter support for babel
         +pandoc          ; export-with-pandoc support
         +gnuplot
@@ -144,7 +149,7 @@
        (php +lsp)               ; perl's insecure younger brother
        ;;plantuml          ; diagrams for confusing people more
        ;;purescript        ; javascript, but functional
-       (python +pyenv +conda +lsp)           ; beautiful is better than ugly
+       (python +pyenv +conda +lsp +cython)           ; beautiful is better than ugly
        ;;qt                ; the 'cutest' gui framework ever
        ;;racket            ; a DSL for DSLs
        ;;rest              ; Emacs as a REST client

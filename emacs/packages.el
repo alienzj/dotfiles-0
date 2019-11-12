@@ -23,3 +23,5 @@
 (package! poly-R)
 (package! poly-wdl)
 (package! ess-view)
+
+(package! ddragon :recipe (:host github :repo "xuchunyang/ddragon.el" :files ("*")))

@@ -10,18 +10,50 @@
 
 
 (setq doom-font (font-spec :family "Monospace" :size 26)
-      doom-variable-pitch-font (font-spec :family "Noto Sans" :size 26))
+      doom-variable-pitch-font (font-spec :family "Noto Sans" :size 26)
+      doom-unicode-font (font-spec :family "Noto Sans")
+      doom-big-font (font-spec :family "Noto Sans" :size 32))
 
 ;;(setq doom-theme 'doom-solarized-light)
 (setq doom-themes-enable-bold t
       doom-themes-enable-italic t)
 (setq doom-themes-treemacs-theme "doom-colors")
+
+;;(doom-themes-visual-bell-config)
+;;(doom-themes-neotree-config)
+
+;;(setq doom-theme 'doom-solarized-dark)
+;;(setq doom-theme 'doom-molokai)
+;;(after! doom-themes
+;;  (add-hook 'doom-load-theme-hook #'doom-themes-org-config))
+
+;;(setq all-the-icons-scale-factor 1.0)
 (doom-themes-treemacs-config)
 (doom-themes-org-config)
 (setq doom-modeline-height 4)
 (setq doom-modeline-bar-width 2)
 (setq doom-modeline-icon t)
 
+(setq magit-repository-directories '(("~/projects" .2))
+      magit-save-repository-buffers nil
+      magit-inhibit-save-previous-winconf t)
+
+(setq bibtex-completion-notes-path "~/documents/doraemon/org/ref.org"
+      bibtex-completion-bibliography '("~/documents/doraemon/org/reference/Bibliography.bib")
+      bibtex-completion-library-path "~/documents/doraemon/org/reference/pdf/"
+
+      org-directory "~/documents/doraemon/org")
+
+(after! org
+  (add-to-list 'org-modules 'org-habit t))
+
+(setq deft-extensions '("txt" "tex" "org"))
+(setq deft-directory "~/documents/doraemon/org")
+(setq deft-recursive t)
+
+;;(setq +lookup-open-url-fn #'eww)
+
+(setq ddragon-dir "~/documents/database/lol")
 
 (defun xah-open-in-vscode ()
   "Open current file or dir in vscode.
