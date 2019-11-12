@@ -1,0 +1,28 @@
+[user]
+	email = alienchuj@gmail.com
+	name = alienzj
+[aur]
+	name = alienzj
+	email = alienchuj@gmail.com
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	visual = !gitk
+[magithub]
+	online = false
+[magithub "status"]
+	includeStatusHeader = false
+	includePullRequestsSection = false
+    	includeIssuesSection = false
+[http]
+	proxy = "http://127.0.0.1:8118"
+[https]
+	proxy = "https://127.0.0.1:8118"
+[credential]
+	helper = store
+[core]
+	pager = delta --dark
