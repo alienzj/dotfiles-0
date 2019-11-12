@@ -1,0 +1,19 @@
+channels:
+  - conda-forge
+  - bioconda
+  - pytorch
+  - knights-lab
+  - alienzj
+  - vanhemertjohn
+  - defaults
+
+pkgs_dirs:
+  - /home/zhujie/.conda/pkgs
+
+envs_dirs:
+  - /home/zhujie/.conda/envs
+
+#proxy_servers:
+#  http: http://127.0.0.1:8118
+#  https: https://127.0.0.1:8118
+auto_activate_base: false
