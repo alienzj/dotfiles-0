@@ -22,7 +22,7 @@
 ;;(doom-themes-visual-bell-config)
 ;;(doom-themes-neotree-config)
 
-;;(setq doom-theme 'doom-solarized-dark)
+(setq doom-theme 'doom-solarized-dark)
 ;;(setq doom-theme 'doom-molokai)
 ;;(after! doom-themes
 ;;  (add-hook 'doom-load-theme-hook #'doom-themes-org-config))
@@ -42,7 +42,15 @@
       bibtex-completion-bibliography '("~/documents/doraemon/org/reference/Bibliography.bib")
       bibtex-completion-library-path "~/documents/doraemon/org/reference/pdf/"
 
-      org-directory "~/documents/doraemon/org")
+      org-directory "~/documents/doraemon/org"
+
+      ;; org-ref
+      org-ref-bibliography-notes "~/documents/doraemon/org/ref.org"
+      org-ref-default-bibliography '("~/documents/doraemon/org/reference/Bibliography.bib")
+      org-ref-pdf-directory "~/documents/doraemon/org/reference/pdf/")
+
+(setq-default org-download-image-dir "~/documents/doraemon/org/notebooks/images")
+
 
 (after! org
   (add-to-list 'org-modules 'org-habit t))
@@ -67,3 +75,6 @@ Version 2019-11-04"
       (shell-command (format "Code \"%s\"" $path)))
      ((string-equal system-type "gnu/linux")
       (shell-command (format "code \"%s\"" $path))))))
+
+;;(setq clang-format-style-option "llvm")
+;;(setq tab-width 4)
