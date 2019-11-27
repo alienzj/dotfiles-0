@@ -26,8 +26,6 @@
 
 (package! ddragon :recipe (:host github :repo "xuchunyang/ddragon.el" :files ("*")))
 
-<<<<<<< HEAD
 (package! anki-editor)
-=======
+
 ;;(package! darkplus :recipe (:host github :repo "popcorn4dinner/darkplus-emacs" :files ("*")))
->>>>>>> 45765cb36119baa0936807faf10c4c33731787a5

@@ -76,11 +76,8 @@ Version 2019-11-04"
      ((string-equal system-type "gnu/linux")
       (shell-command (format "code \"%s\"" $path))))))
 
-<<<<<<< HEAD
 (setq anki-editor-create-decks t)
 
 (setq conda-anaconda-home "~/.conda/envs/bioenv")
-=======
 ;;(setq clang-format-style-option "llvm")
 ;;(setq tab-width 4)
->>>>>>> 45765cb36119baa0936807faf10c4c33731787a5
