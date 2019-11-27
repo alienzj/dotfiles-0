@@ -67,3 +67,7 @@ Version 2019-11-04"
       (shell-command (format "Code \"%s\"" $path)))
      ((string-equal system-type "gnu/linux")
       (shell-command (format "code \"%s\"" $path))))))
+
+(setq anki-editor-create-decks t)
+
+(setq conda-anaconda-home "~/.conda/envs/bioenv")

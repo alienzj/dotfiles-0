@@ -25,3 +25,5 @@
 (package! ess-view)
 
 (package! ddragon :recipe (:host github :repo "xuchunyang/ddragon.el" :files ("*")))
+
+(package! anki-editor)
