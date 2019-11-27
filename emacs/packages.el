@@ -8,7 +8,7 @@
 
 (package! org-pdftools :recipe (:host github :repo "fuxialexander/org-pdftools" :files ("*")))
 (package! org-noter :recipe (:host github :repo "fuxialexander/org-noter" :branch "pdf-notes-booster" :files ("*")))
-
+(package! org-ref)
 (package! websocket)
 (package! zmq)
 (package! simple-httpd)
@@ -26,4 +26,8 @@
 
 (package! ddragon :recipe (:host github :repo "xuchunyang/ddragon.el" :files ("*")))
 
+<<<<<<< HEAD
 (package! anki-editor)
+=======
+;;(package! darkplus :recipe (:host github :repo "popcorn4dinner/darkplus-emacs" :files ("*")))
+>>>>>>> 45765cb36119baa0936807faf10c4c33731787a5
