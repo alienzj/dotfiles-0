@@ -122,7 +122,8 @@
        (haskell +intero +lsp) ; a language that's lazier than I am
        ;;hy                ; readability of scheme w/ speed of python
        ;;idris             ;
-       (java +meghanada) ; the poster child for carpal tunnel syndrome
+       (java +meghanada
+             +lsp) ; the poster child for carpal tunnel syndrome
        (javascript +lsp)     ; all(hope(abandon(ye(who(enter(here))))))
        (julia +lsp)            ; a better, faster MATLAB
        kotlin            ; a better, slicker Java(Script)
