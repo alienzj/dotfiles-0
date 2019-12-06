@@ -29,3 +29,5 @@
 (package! anki-editor)
 
 ;;(package! darkplus :recipe (:host github :repo "popcorn4dinner/darkplus-emacs" :files ("*")))
+
+(package! awesome-tab :recipe (:host github :repo "manateelazycat/awesome-tab" :files ("*")))
