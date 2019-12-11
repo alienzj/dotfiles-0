@@ -13,7 +13,9 @@
        ;;japanese
 
        :completion
-       company           ; the ultimate code completion backend
+       (company           ; the ultimate code completion backend
+        +auto
+        +childframe)
        ;;helm              ; the *other* search engine for love and life
        ;;ido               ; the other *other* search engine...
        (ivy               ; a search engine for love and life
@@ -145,7 +147,8 @@
         +ipython         ; ipython/jupyter support for babel
         +pandoc          ; export-with-pandoc support
         +gnuplot
-        +present)        ; using org-mode for presentations
+        +present
+        +journal)        ; using org-mode for presentations
        perl             ; write code no one else can comprehend
        (php +lsp)               ; perl's insecure younger brother
        ;;plantuml          ; diagrams for confusing people more

@@ -9,6 +9,8 @@
 (package! org-pdftools :recipe (:host github :repo "fuxialexander/org-pdftools" :files ("*")))
 (package! org-noter :recipe (:host github :repo "fuxialexander/org-noter" :branch "pdf-notes-booster" :files ("*")))
 (package! org-ref)
+(package! org-brain)
+
 (package! websocket)
 (package! zmq)
 (package! simple-httpd)
@@ -30,4 +32,7 @@
 
 ;;(package! darkplus :recipe (:host github :repo "popcorn4dinner/darkplus-emacs" :files ("*")))
 
-(package! awesome-tab :recipe (:host github :repo "manateelazycat/awesome-tab" :files ("*")))
+;;(package! awesome-tab :recipe (:host github :repo "manateelazycat/awesome-tab" :files ("*")))
+
+(package! tldr)
+(package! esup)
