@@ -4,10 +4,12 @@
 
 (setq user-full-name "alienzj"
       user-mail-address "alienchuj@gmail.com"
-      epa-file-encrypt-to user-mail-address
+      epa-file-encrypt-to user-mail-address)
 
-      company-idle-delay nil)
-
+;; enable auto-completion
+(require 'company)
+(setq company-idle-delay 0.2
+      company-minimum-prefix-length 3)
 
 (setq doom-font (font-spec :family "Monospace" :size 26)
       doom-variable-pitch-font (font-spec :family "Noto Sans" :size 26)
@@ -78,7 +80,8 @@ Version 2019-11-04"
 
 (setq anki-editor-create-decks t)
 
-(setq conda-anaconda-home "~/.conda/envs/bioenv")
+(setq conda-anaconda-home "~/.conda/envs/bioenv"
+      conda-env-home-directory "~/.conda/envs/bioenv")
 ;;(setq clang-format-style-option "llvm")
 ;;(setq tab-width 4)
 
