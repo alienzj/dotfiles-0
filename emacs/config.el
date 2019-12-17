@@ -94,3 +94,10 @@ Version 2019-11-04"
 
 (after! treemacs
   (add-hook 'treemacs-select-hook #'remove-fringes))
+
+(require 'conda)
+(conda-env-initialize-interactive-shells)
+(conda-env-initialize-eshell)
+(conda-env-autoactivate-mode t)
+
+(setq conda-anaconda-home "~/.conda/envs/bioenv")
