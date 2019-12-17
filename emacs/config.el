@@ -101,3 +101,8 @@ Version 2019-11-04"
 (conda-env-autoactivate-mode t)
 
 (setq conda-anaconda-home "~/.conda/envs/bioenv")
+
+(dap-mode 1)
+(dap-ui-mode 1)
+(dap-tooltip-mode 1)
+(tooltip-mode 1)
