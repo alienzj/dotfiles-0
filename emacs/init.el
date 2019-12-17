@@ -14,7 +14,6 @@
 
        :completion
        (company           ; the ultimate code completion backend
-        +auto
         +childframe)
        ;;helm              ; the *other* search engine for love and life
        ;;ido               ; the other *other* search engine...
@@ -85,7 +84,7 @@
        docker
        editorconfig      ; let someone else argue about tabs vs spaces
        ;;ein               ; tame Jupyter notebooks with emacs
-       eval              ; run code, run (also, repls)
+       (eval +overlay)              ; run code, run (also, repls)
        flycheck          ; tasing you for every semicolon you forget
        ;;flyspell          ; tasing you for misspelling mispelling
        gist              ; interacting with github gists
@@ -128,23 +127,21 @@
              +lsp) ; the poster child for carpal tunnel syndrome
        (javascript +lsp)     ; all(hope(abandon(ye(who(enter(here))))))
        (julia +lsp)            ; a better, faster MATLAB
-       kotlin            ; a better, slicker Java(Script)
+       (kotlin +lsp)           ; a better, slicker Java(Script)
        latex             ; writing papers in Emacs has never been so fun
        ;;lean
        ;;ledger            ; an accounting system in Emacs
        ;;lua               ; one-based indices? one-based indices
-       markdown          ; writing docs for people to ignore
+       (markdown +grip)         ; writing docs for people to ignore
        ;;nim               ; python + lisp at the speed of c
        ;;nix               ; I hereby declare "nix geht mehr!"
        (ocaml +lsp)            ; an objective camel
        (org              ; organize your plain life in plain text
-        +attach
         +dragndrop       ; drag & drop files/images into org buffers
         +hugo
-        +capture
-        +habit
         +pomodoro
-        +ipython         ; ipython/jupyter support for babel
+        +ipython
+        +jupyter         ; ipython/jupyter support for babel
         +pandoc          ; export-with-pandoc support
         +gnuplot
         +present
@@ -159,7 +156,7 @@
        ;;rest              ; Emacs as a REST client
        (ruby +lsp +rvm +rbenv)              ; 1.step {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
        (rust +lsp)             ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
-       scala             ; java, but good
+       (scala +lsp)           ; java, but good
        scheme            ; a fully conniving family of lisps
        (sh +lsp +fish)               ; she sells {ba,z,fi}sh shells on the C xor
        ;;solidity          ; do you need a blockchain? No.
@@ -210,7 +207,10 @@
      "~/documents/doraemon/org/meeting.org"
      "~/documents/doraemon/org/ref.org"
      "~/documents/doraemon/org/review.org"
-     "~/documents/doraemon/org/workflow.org"))))
+     "~/documents/doraemon/org/workflow.org")))
+
+ '(conda-anaconda-home "~/.conda/envs/bioenv"))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

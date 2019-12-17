@@ -11,11 +11,6 @@
 (package! org-ref)
 (package! org-brain)
 
-(package! websocket)
-(package! zmq)
-(package! simple-httpd)
-(package! jupyter)
-
 (package! snakemake-mode)
 (package! pkgbuild-mode)
 (package! wdl-mode)

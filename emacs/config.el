@@ -80,8 +80,6 @@ Version 2019-11-04"
 
 (setq anki-editor-create-decks t)
 
-(setq conda-anaconda-home "~/.conda/envs/bioenv"
-      conda-env-home-directory "~/.conda/envs/bioenv")
 ;;(setq clang-format-style-option "llvm")
 ;;(setq tab-width 4)
 
