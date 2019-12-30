@@ -95,14 +95,19 @@ Version 2019-11-04"
 (after! treemacs
   (add-hook 'treemacs-select-hook #'remove-fringes))
 
-(require 'conda)
-(conda-env-initialize-interactive-shells)
-(conda-env-initialize-eshell)
-(conda-env-autoactivate-mode t)
+;;(require 'conda)
+;;(setq conda-anaconda-home "~/.conda/envs/bioenv")
+;;(conda-env-initialize-interactive-shells)
+;;(conda-env-initialize-eshell)
+;;(conda-env-autoactivate-mode t)
 
-(setq conda-anaconda-home "~/.conda/envs/bioenv")
 
-(dap-mode 1)
-(dap-ui-mode 1)
-(dap-tooltip-mode 1)
-(tooltip-mode 1)
+;;(dap-mode 1)
+;;(dap-ui-mode 1)
+;;(dap-tooltip-mode 1)
+;;(tooltip-mode 1)
+;;(require 'dap-gdb-lldb)
+;;(require 'dap-python)
+
+;;(setq tramp-default-method "ssh")
+;;(eval-after-load 'tramp '(setenv "SHELL" "/bin/bash"))

@@ -104,7 +104,7 @@
        ;;wakatime
 
        :lang
-       agda              ; types of types of types of types...
+       ;;agda              ; types of types of types of types...
        assembly          ; assembly for fun or debugging
        (cc +lsp)                ; C/C++/Obj-C madness
        clojure           ; java with a lisp
@@ -209,7 +209,8 @@
      "~/documents/doraemon/org/review.org"
      "~/documents/doraemon/org/workflow.org")))
 
- '(conda-anaconda-home "~/.conda/envs/bioenv"))
+ ;;'(conda-anaconda-home "~/.conda/envs/bioenv")
+ )
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
