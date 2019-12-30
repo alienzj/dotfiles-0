@@ -1,0 +1,171 @@
+add_newline = false
+
+prompt_order = [
+    "username",
+    "hostname",
+    "kubernetes",
+    "directory",
+    "git_branch",
+    "git_commit",
+    "git_state",
+    "git_status",
+    "hg_branch",
+    "package",
+    "dotnet",
+    "golang",
+    "java",
+    "nodejs",
+    "php",
+    "python",
+    "ruby",
+    "rust",
+    "terraform",
+    "nix_shell",
+    "conda",
+    "memory_usage",
+    "aws",
+    "env_var",
+    "cmd_duration",
+    "line_break",
+    "jobs",
+    "battery",
+    "time",
+    "character",
+]
+
+[battery]
+full_symbol = "🔋"
+charging_symbol = "⚡️"
+discharging_symbol = "💀"
+
+[[battery.display]]
+threshold = 10
+style = "bold red"
+
+scan_timeout = 10
+
+[character]
+symbo = '➜'
+
+[character]
+symbol = "➜"
+error_symbol = "✗"
+use_symbol_for_status = true
+
+[conda]
+style = "dimmed green"
+
+[directory]
+truncation_length = 8
+
+[dotnet]
+symbol = "🥅 "
+style = "green"
+heuristic = false
+
+[env_var]
+variable = "SHELL"
+default = "unknown shell"
+
+[git_branch]
+symbol = "🌱 "
+truncation_length = 4
+truncation_symbol = ""
+
+[git_commit]
+disabled = false
+commit_hash_length = 4
+
+[git_state]
+progress_divider = " of "
+cherry_pick = "🍒 PICKING"
+
+[git_status]
+conflicted = "🏳"
+ahead = "🏎💨"
+behind = "😰"
+diverged = "😵"
+untracked = "🤷‍"
+stashed = "📦"
+modified = "📝"
+staged.value = "++"
+staged.style = "green"
+staged_count.enabled = true
+staged_count.style = "green"
+renamed = "👅"
+deleted = "🗑"
+
+[golang]
+symbol = "🏎💨 "
+
+[hg_branch]
+symbol = "🌱 "
+truncation_length = 4
+truncation_symbol = ""
+
+[hostname]
+ssh_only = false
+prefix = "⟪"
+suffix = "⟫"
+trim_at = ".companyname.com"
+disabled = false
+
+[jobs]
+symbol = "+ "
+threshold = 4
+
+[kubernetes]
+symbol = "⛵ "
+style = "dim green"
+disabled = false
+
+[line_break]
+disabled = true
+
+[nix_shell]
+disabled = true
+use_name = true
+impure_msg = "impure shell"
+pure_msg = "pure shell"
+
+[java]
+symbol = "🌟 "
+
+[memory_usage]
+show_percentage = true
+show_swap = true
+threshold = -1
+symbol = " "
+separator = "/"
+style = "bold dimmed green"
+
+[nodejs]
+symbol = "🤖 "
+
+[package]
+symbol = "🎁 "
+
+[php]
+symbol = "🔹 "
+
+[python]
+symbol = "👾 "
+pyenv_version_name = true
+pyenv_prefix = "foo "
+
+[ruby]
+symbol = "🔺 "
+
+[rust]
+symbol = "⚙️ "
+
+[terraform]
+symbol = "🏎💨 "
+
+[time]
+disabled = false
+format = "🕙[ %T ]"
+utc_time_offset = -5
+
+[username]
+disabled = true
