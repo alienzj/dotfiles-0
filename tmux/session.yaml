@@ -1,0 +1,73 @@
+session_name: supermeta
+
+windows:
+- window_name: galaxy
+  layout: main-vertical
+  panes:
+  - shell_command:
+    - cd ~/projects/galaxy
+    - clear
+    focus: true
+
+- window_name: jupyter
+  layout: main-vertical
+  panes:
+  - shell_command:
+    - conda activate bioenv           
+    - cd ~/
+    - jupyter lab
+    - clear
+  - shell_command:
+    - conda activate bioenv           
+    - cd ~/
+    - clear
+  focus: true
+
+- window_name: install
+  layout: main-vertical
+  panes:
+  - pane
+  - shell_command:
+    - conda activate bioenv           
+    - cd ~/
+    - clear
+    focus: true
+
+- window_name: bioconda
+  layout: main-vertical
+  panes:
+  - shell_command:
+    - conda activate bioenv
+    - cd ~/projects/bioconda-recipes
+    - clear
+    focus: true
+  - shell_command:
+    - conda activate bioenv
+    - cd ~/projects/bioconda-recipes
+    - clear
+ 
+- window_name: database
+  layout: main-vertical
+  panes:
+  - shell_command:
+    - conda activate bioenv           
+    - cd ~/databases
+    - clear
+    focus: true
+  - shell_command:
+    - conda activate bioenv
+    - cd ~/databases
+    - clear
+
+- window_name: metapi
+  layout: main-vertical
+  panes:
+  - shell_command:
+    - conda activate bioenv
+    - cd ~/projects/metapi
+    - clear
+    focus: true
+  - shell_command:
+    - conda activate bioenv
+    - cd ~/projects/metapi/test/develop_test
+    - clear

@@ -1,0 +1,6 @@
+new-window -n galaxy 'cd ~/projects'
+new-window -n jupyter 'conda activate bioenv; jupyter lab'
+new-window -n install
+new-window -n bioconda 'conda activate bioenv; cd ~/projects/bioconda-recipes'
+new-window -n database 'cd ~/databases'
+new-window -n metapi 'conda activate bioenv; cd ~/projects/metapi'
