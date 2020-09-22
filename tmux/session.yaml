@@ -1,14 +1,6 @@
 session_name: supermeta
 
 windows:
-- window_name: galaxy
-  layout: main-vertical
-  panes:
-  - shell_command:
-    - cd ~/projects/galaxy
-    - clear
-    focus: true
-
 - window_name: jupyter
   layout: main-vertical
   panes:
@@ -23,7 +15,7 @@ windows:
     - clear
   focus: true
 
-- window_name: install
+- window_name: software
   layout: main-vertical
   panes:
   - pane
@@ -33,19 +25,6 @@ windows:
     - clear
     focus: true
 
-- window_name: bioconda
-  layout: main-vertical
-  panes:
-  - shell_command:
-    - conda activate bioenv
-    - cd ~/projects/bioconda-recipes
-    - clear
-    focus: true
-  - shell_command:
-    - conda activate bioenv
-    - cd ~/projects/bioconda-recipes
-    - clear
- 
 - window_name: database
   layout: main-vertical
   panes:
