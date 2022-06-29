@@ -18,7 +18,8 @@ windows:
 - window_name: software
   layout: main-vertical
   panes:
-  - pane
+  - shell_command:
+    - clear
   - shell_command:
     - conda activate bioenv           
     - cd ~/

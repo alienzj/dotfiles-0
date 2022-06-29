@@ -1,3 +1,3 @@
 function la
-	exa -lag $argv
+  ls -a $argv
 end

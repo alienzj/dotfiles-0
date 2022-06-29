@@ -1,3 +1,4 @@
-function ll
-	exa -lg $argv
+# Defined interactively
+function ll --wraps=ls
+exa -l $argv
 end

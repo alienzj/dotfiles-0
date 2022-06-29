@@ -1,5 +1,5 @@
 function snakesub --wraps snakemake --description 'snakemake job submitter' --argument config cluster job target
-    snakemake --snakefile /ldfssz1/ST_META/share/User/zhujie/toolkit/metapi/metapi/Snakefile \
+    snakemake --snakefile ~/projects/metapi/metapi/Snakefile \
     --configfile $config \
     --cluster-config $cluster \
     --jobs $job \

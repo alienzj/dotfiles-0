@@ -1,19 +1,115 @@
 channels:
   - conda-forge
   - bioconda
+  - ggd-genomics
   - pytorch
+  - biobakery
+  - qiime2
+  - ohmeta
   - knights-lab
-  - alienzj
-  - vanhemertjohn
   - defaults
 
-pkgs_dirs:
-  - /home/zhujie/.conda/pkgs
+show_channel_urls: true
+#report_errors: true
+
+#channel_alias: https://mirrors.tuna.tsinghua.edu.cn/anaconda
+#channel_alias: https://mirrors.bfsu.edu.cn/anaconda
+
+#default_channels:
+#  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+#  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+#  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+
+#  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/main
+#  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/free
+#  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/r
+
+#custom_channels:
+#  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+#  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+#  ggd-genomics: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+#  biobakery: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+#  qiime2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+#  ohmeta: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+#  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+
+#  conda-forge: https://mirrors.bfsu.edu.cn/anaconda/cloud
+#  bioconda: https://mirrors.bfsu.edu.cn/anaconda/cloud
+#  ggd-genomics: https://mirrors.bfsu.edu.cn/anaconda/cloud
+#  biobakery: https://mirrors.bfsu.edu.cn/anaconda/cloud
+#  qiime2: https://mirrors.bfsu.edu.cn/anaconda/cloud
+#  ohmeta: https://mirrors.bfsu.edu.cn/anaconda/cloud
+#  pytorch: https://mirrors.bfsu.edu.cn/anaconda/cloud
+
+#  knights-lab: https://conda.anaconda.org
+#  alienzj: https://conda.anaconda.org
+
+#create_default_packages:
+#  - python
+#  - pip
+#  - ipython
+#  - jupyter
+#  - numpy
+#  - pandas
+#  - scipy
+#  - scikit-learn
+#  - matplotlib
+#  - seaborn
+#  - plotnine
+#  - biopython
+#  - perl
+#  - r
+#  - r-tidyverse
+#  - bwa
+#  - bowtie2
+#  - minimap2
+#  - blast
+#  - spades
+#  - megahit
+#  - idba
+#  - snakemake
+#  - mamba
 
 envs_dirs:
-  - /home/zhujie/.conda/envs
+  - /home/alienzj/.conda/envs
+pkgs_dirs:
+  - /home/alienzj/.conda/pkgs
 
 #proxy_servers:
-#  http: http://127.0.0.1:8118
-#  https: https://127.0.0.1:8118
+#  http: http://10.53.15.246:3128
+#  http: http://10.53.6.245:3128
+#  https: http://10.53.15.246:3128
+#  https: http://10.53.6.245:3128
+
 auto_activate_base: false
+auto_update_conda: false
+always_yes: false
+changeps1: true
+#ssl_verify: false
+offline: false
+update_dependencies: true
+anaconda_upload: false
+default_threads: 8
+repodata_threads: 8
+execute_threads: 8
+verify_threads: 8
+use_only_tar_bz2: false
+
+#track_features:
+#  - mkl
+
+conda-build:
+  root-dir: /home/alienzj/.conda/blds
+  output_folder: /home/alienzj/.conda/blds/pkgs
+  #quiet: true
+  filename_hashing: flase
+  no_verify: false
+  set_build_id: true
+  skip_existing: true
+  activate: true
+  long_test_prefix: true
+
+#safety_checks: disabled
+#channel_priority: strict
+remote_read_timeout_secs: 1200.0
+ssl_verify: true

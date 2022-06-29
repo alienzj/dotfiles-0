@@ -1,0 +1,138 @@
+# path functions
+function setpath
+    if not contains $argv $PATH
+        set -gx PATH $argv $PATH
+    end
+end
+
+function setpypath
+    if not contains $argv $PYTHONPATH
+        set -gx PYTHONPATH $argv $PYTHONPATH
+    end
+end
+
+# starship
+#set -gx STARSHIP_CONFIG ~/.config/starship.toml
+#starship init fish | source
+
+# toolkit path
+#setpath /opt/depot_tools
+#setpath ~/projects/depot_tools
+setpath ~/.local/bin
+setpath ~/projects/toolkits/pyani/bin
+setpath ~/projects/toolkits/GraphBin/bin
+setpath ~/.aspera/connect/bin
+
+# node
+set -gx npm_config_prefix ~/.nodejs
+setpath $npm_config_prefix/bin
+
+# rstan
+# set -xg DOWNLOAD_STATIC_LIBV8 1
+
+# ruby
+set -gx GEM_HOME ~/.gem
+set -gx GEM_ROOT (ruby -e 'print Gem.user_dir')
+setpath $GEM_ROOT/bin
+
+# nix 
+setpath ~/.nix-profile/bin
+
+# emacs
+#setpath ~/.emacs.d/bin
+setpath ~/.doom-emacs/bin
+
+# rust
+setpath ~/.cargo/bin
+#set -x RUSTUP_DIST_SERVER https://mirrors.ustc.edu.cn/rust-static
+#set -x RUSTUP_UPDATE_ROOT https://mirrors.ustc.edu.cn/rust-static/rustup
+#set -gx RUSTUP_DIST_SERVER https://mirrors.tuna.tsinghua.edu.cn/rustup
+#set -gx CARGO_TARGET_DIR /home/zhujie/.cache/cargo_target
+
+# go
+set -gx GOPATH ~/.go
+setpath ~/.go/bin 
+
+# perl
+setpath ~/.perl5/bin
+# perl local::lib cpan cpanm
+set -gx PERL5USERLIB /home/zhujie/.perl5
+test -n "$PERL_MB_OPT"; or set -gx PERL_MB_OPT "--install_base $PERL5USERLIB"
+test -n "$PERL_MM_OPT"; or set -gx PERL_MM_OPT "INSTALL_BASE $PERL5USERLIB"
+test -n "$PERL_LOCAL_LIB_ROOT"; or set -gx PERL_LOCAL_LIB_ROOT $PERL5USERLIB
+test -n "$PERL_CPANM_OPT"; or set -gx PERL_CPANM_OPT "--prompt --local-lib $PERL5USERLIB --mirror http://mirrors.ustc.edu.cn/CPAN"
+
+test -n "$PERL5LIB"; or set -gx PERL5LIB "$PERL5USERLIB/lib/perl5"
+if not contains $PERL5USERLIB/lib/perl5 $PERL5LIB
+  set -gx PERL5LIB "$PERL5USERLIB/lib/perl5" $PERL5LIB
+end
+
+# python
+# python dvelopment
+setpypath ~/projects/pipelines/metapi
+setpypath ~/projects/pipelines/genepi
+setpypath ~/projects/pipelines/growpi
+setpypath ~/projects/pipelines/ampi
+setpypath ~/projects/pipelines/rnapi
+setpypath ~/projects/pipelines/scipi
+setpypath ~/projects/pipelines/tbpi
+setpypath ~/projects/pipelines/flupi
+
+setpypath ~/projects/toolkits/RiboDetector
+
+setpypath ~/projects/toolkits/drep
+setpypath ~/projects/toolkits/pyani
+setpypath ~/projects/toolkits/MetaBGC/MetaBGC-Development
+#setpypath ~/projects/toolkits/genomepy
+#setpypath ~/projects/toolkits/GraphBin
+
+# spades development
+#setpypath /home/zhujie/projects/assembler/spades/assembler/src/spades_pipeline
+#setpypath /home/zhujie/projects/assembler/spades/assembler/src/spades_pipeline/truspades
+#setpypath /home/zhujie/projects/assembler/spades/assembler/src/spades_pipeline/common
+#setpypath /home/zhujie/projects/assembler/spades/assembler/src/spades_pipeline/executors
+#setpypath /home/zhujie/projects/assembler/spades/assembler/src/spades_pipeline/scripts
+
+
+
+# R
+#set -gx RSTUDIO_WHICH_R /home/zhujie/.conda/envs/bioenv/bin/R
+
+# julia
+#set -gx JULIA_PKG_SERVER https://mirrors.tuna.tsinghua.edu.cn/julia
+
+# java
+#set -x METALS_JDK_PATH /usr/lib/jvm/java-13-openjdk/bin
+
+# proxy
+#set -x http_proxy http://127.0.0.1:8118
+#set -xg http_proxy http://127.0.0.1:9910
+#set -x https_proxy http://127.0.0.1:8118
+#set -xg https_proxy http://127.0.0.1:9910
+#set -x ftp_proxy http://127.0.0.1:8118
+
+# Daily Photo
+#set -x DAILY_PHOTO_DIRECTORY ~/pictures
+#set -x DAILY_PHOTO_BOT_TOKEN 1080828488:AAH3ItuQfufyohW_HVMUiHXkBhNGT4Vwijk
+#set -x DAILY_PHOTO_CHAT_ID AAAAAEXnMhCOFwQRNqKCdQ
+
+# conda
+#eval /home/zhujie/.conda/envs/bioenv/bin/conda "shell.fish" "hook" $argv | source
+
+# alias
+alias ls="lsd"
+alias l="ls -l"
+alias la="ls -a"
+alias lla="ls -la"
+alias lt="ls --tree"
+
+set -gx GITHUB_PAT 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
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+#eval /home/pasteur/.conda/envs/bioenv/bin/conda "shell.fish" "hook" $argv | source
+eval /home/zhujie/.conda/envs/bioenv3.9/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<
+
+# opam configuration
+source /home/zhujie/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true

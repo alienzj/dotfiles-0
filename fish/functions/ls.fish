@@ -1,3 +1,4 @@
-function ls
-	exa -g $argv
+# Defined interactively
+function ls --wraps=lsd
+exa $argv
 end
