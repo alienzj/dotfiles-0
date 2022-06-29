@@ -1,0 +1,143 @@
+# path functions
+function setpypath
+    if not contains $argv $PYTHONPATH
+        set -x PYTHONPATH $argv $PYTHONPATH
+    end
+end
+
+# starship
+#set -x STARSHIP_CONFIG ~/.config/starship.toml
+#starship init fish | source
+
+# DRIAMS
+#set -x DRIAMS_ROOT /home/zhujie/databases/driams
+
+# GTDB
+#set -x GTDBTK_DATA_PATH /home/zhujie/databases/ecogenomics/GTDB/release202
+
+# nextflow
+set -x NXF_CONDA_CACHEDIR /home/zhujie/.conda/envs_nxf
+
+# perl
+fish_add_path ~/.perl5/bin
+# perl local::lib cpan cpanm
+set -x PERL5USERLIB /home/zhujie/.perl5
+test -n "$PERL_MB_OPT"; or set -x PERL_MB_OPT "--install_base $PERL5USERLIB"
+test -n "$PERL_MM_OPT"; or set -x PERL_MM_OPT "INSTALL_BASE $PERL5USERLIB"
+test -n "$PERL_LOCAL_LIB_ROOT"; or set -x PERL_LOCAL_LIB_ROOT $PERL5USERLIB
+test -n "$PERL_CPANM_OPT"; or set -x PERL_CPANM_OPT "--prompt --local-lib $PERL5USERLIB --mirror http://mirrors.ustc.edu.cn/CPAN"
+
+test -n "$PERL5LIB"; or set -x PERL5LIB "$PERL5USERLIB/lib/perl5"
+if not contains $PERL5USERLIB/lib/perl5 $PERL5LIB
+  set -x PERL5LIB "$PERL5USERLIB/lib/perl5" $PERL5LIB
+end
+
+# python
+# python dvelopment
+setpypath ~/toolkit/metapi
+setpypath ~/toolkit/quantpi
+setpypath ~/toolkit/foldpi
+setpypath ~/toolkit/callpi
+setpypath ~/toolkit/growpi
+setpypath ~/toolkit/genepi
+setpypath ~/toolkit/archpi
+setpypath ~/toolkit/ampi
+setpypath ~/toolkit/flupi
+setpypath ~/toolkit/tbpi
+setpypath ~/toolkit/scipi
+setpypath ~/toolkit/rnapi
+setpypath ~/toolkit/growpi
+setpypath ~/toolkit/dnbtk
+setpypath ~/toolkit/sgetk
+
+#setpypath ~/toolkit/Topf
+#setpypath ~/toolkit/maldi-learn
+#setpypath ~/toolkit/vcontact2
+#setpypath ~/toolkit/VirSorter2
+#setpypath ~/toolkit/DeepVirFinder
+
+# conda
+fish_add_path ~/.conda/envs/bioenv3.9/bin
+
+# toolkit path
+fish_add_path ~/.local/bin
+fish_add_path ~/.aspera/connect/bin
+
+# node
+set -x npm_config_prefix ~/.nodejs
+fish_add_path $npm_config_prefix/bin
+
+# rstan
+# set -x DOWNLOAD_STATIC_LIBV8 1
+
+# ruby
+#set -x GEM_HOME ~/.gem
+#set -x GEM_ROOT (ruby -e 'print Gem.user_dir')
+#fish_add_path $GEM_ROOT/bin
+
+# nix 
+#fish_add_path ~/.nix-profile/bin
+
+# emacs
+#fish_add_path ~/.emacs.d/bin
+fish_add_path ~/.doom-emacs/bin
+
+# rust
+fish_add_path ~/.cargo/bin
+#set -x RUSTUP_DIST_SERVER https://mirrors.ustc.edu.cn/rust-static
+#set -x RUSTUP_UPDATE_ROOT https://mirrors.ustc.edu.cn/rust-static/rustup
+#set -x RUSTUP_DIST_SERVER https://mirrors.tuna.tsinghua.edu.cn/rustup
+#set -x CARGO_TARGET_DIR /home/zhujie/.cache/cargo_target
+
+# go
+set -x GOPATH ~/.go
+fish_add_path ~/.go/bin 
+
+# spades development
+#setpypath /home/zhujie/toolkit/spades/assembler/src/spades_pipeline
+#setpypath /home/zhujie/toolkit/spades/assembler/src/spades_pipeline/truspades
+#setpypath /home/zhujie/toolkit/spades/assembler/src/spades_pipeline/common
+#setpypath /home/zhujie/toolkit/spades/assembler/src/spades_pipeline/executors
+#setpypath /home/zhujie/toolkit/spades/assembler/src/spades_pipeline/scripts
+
+# R
+#set -x RSTUDIO_WHICH_R /home/zhujie/.conda/envs/bioenv/bin/R
+#set -x RSTUDIO_WHICH_R /home/zhujie/.conda/envs/qiime2-2021.4/bin/R
+#set -x rsession_which_r /home/zhujie/.conda/envs/qiime2-2021.4/bin/R
+
+# julia
+#set -x JULIA_PKG_SERVER https://mirrors.tuna.tsinghua.edu.cn/julia
+
+# java
+#set -x METALS_JDK_PATH /usr/lib/jvm/java-13-openjdk/bin
+
+# proxy
+#set -x http_proxy http://127.0.0.1:8118
+#set -x http_proxy http://127.0.0.1:9910
+#set -x https_proxy http://127.0.0.1:8118
+#set -x https_proxy http://127.0.0.1:9910
+#set -x ftp_proxy http://127.0.0.1:8118
+
+# toolkit
+fish_add_path $TOOLKIT/sgetk/sgetk:$PATH
+fish_add_path $TOOLKIT/asub:$PATH
+fish_add_path $TOOLKIT/OAFilter/src:$PATH
+fish_add_path $TOOLKIT/ANIcalculator_v1:$PATH 
+fish_add_path $TOOLKIT/usearch/bin:$PATH 
+fish_add_path $TOOLKIT/uchime/v4.2.40/bin:$PATH 
+fish_add_path $TOOLKIT/gfa1/bin:$PATH
+fish_add_path $TOOLKIT/ed/bin:$PATH
+fish_add_path $TOOLKIT/hifiasm-meta/bin:$PATH
+#fish_add_path $TOOLKIT/EukCC/bin:$PATH
+#fish_add_path $TOOLKIT/EukCC/scripts:$PATH
+#fish_add_path $TOOLKIT/gmes_linux_64:$PATH
+
+set -x GITHUB_PAT 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
+
+# opam configuration
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+eval /home/zhujie/.conda/envs/bioenv3.9/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<
+
