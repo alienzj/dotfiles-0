@@ -1,0 +1,103 @@
+# common variables
+export ZJHOME=/home/zhujie
+export TOOLKIT=$ZJHOME/toolkit
+export ENVDIR=$ZJHOME/.conda/envs
+export BIOENV=$ZJHOME/.conda/envs/bioenv3.9
+export DATABASEDIR=$ZJHOME/databases
+
+# DRIAMS
+#export DRIAMS_ROOT=$DATABASEDIR/driams
+
+# R
+#export RSTUDIO_WHICH_R=$ENVDIR/bioenv/bin/R
+#export RSTUDIO_WHICH_R=$ENVDIR/qiime2-2021.4/bin/R
+#export rsession_which_r=$ENVDIR/qiime2-2021.4/bin/R
+
+# database
+# GTDB
+#export GTDBTK_DATA_PATH=$DATABASEDIR/ecogenomics/GTDB/release202
+
+# AUGUSTUS
+#export AUGUSTUS_CONFIG_PATH=$DATABASEDIR/augustus/config
+
+# PERL
+# perl local::lib cpan cpanm
+export PERL5USERLIB=$ZJHOME/.perl5
+export PERL_MB_OPT="--install_base $PERL5USERLIB"
+export PERL_MM_OPT="INSTALL_BASE=$PERL5USERLIB"
+export PERL_LOCAL_LIB_ROOT=$PERL5USERLIB
+export PERL_CPANM_OPT="--prompt --local-lib $PERL5USERLIB --mirror http://mirrors.ustc.edu.cn/CPAN"
+export PERL5LIB=$PERL5USERLIB/lib/perl5
+#export PERL5LIB=$PERL5LIB:$PERL5USERLIB/lib/perl5
+#export PERL5LIB=$ENVDIR/bioenv/lib/site_perl/5.26.2:$PERL5LIB
+
+# PYTHONPATH
+export PYTHONPATH=$TOOLKIT/metapi:$PYTHONPATH 
+export PYTHONPATH=$TOOLKIT/quantpi:$PYTHONPATH 
+export PYTHONPATH=$TOOLKIT/rnapi:$PYTHONPATH 
+export PYTHONPATH=$TOOLKIT/ampi:$PYTHONPATH 
+export PYTHONPATH=$TOOLKIT/foldpi:$PYTHONPATH 
+export PYTHONPATH=$TOOLKIT/callpi:$PYTHONPATH 
+export PYTHONPATH=$TOOLKIT/tbpi:$PYTHONPATH 
+export PYTHONPATH=$TOOLKIT/scipi:$PYTHONPATH 
+export PYTHONPATH=$TOOLKIT/genepi:$PYTHONPATH 
+export PYTHONPATH=$TOOLKIT/archpi:$PYTHONPATH 
+export PYTHONPATH=$TOOLKIT/flupi:$PYTHONPATH 
+#export PYTHONPATH=$TOOLKIT/metapi_dev:$PYTHONPATH 
+
+export PYTHONPATH=$TOOLKIT/sgetk:$PYTHONPATH 
+export PYTHONPATH=$TOOLKIT/dnbtk:$PYTHONPATH
+
+#export PYTHONPATH=$TOOLKIT/Topf:$PYTHONPATH
+#export PYTHONPATH=$TOOLKIT/maldi-learn:$PYTHONPATH
+
+#export PYTHONPATH=$TOOLKIT/VirSorter2:$PYTHONPATH
+#export PYTHONPATH=$TOOLKIT/DeepVirFinder:$PYTHONPATH
+
+# conda path (bioenv is a soft link)
+# using conda activate
+# conda activate bioenv
+# conda activate bioenv2
+#export PATH=$ENVDIR/bioenv2/bin:$PATH
+export PATH=$ENVDIR/bioenv3.9/bin:$PATH             
+#export PATH=$ENVDIR/bioenv_deprecated/bin:$PATH
+#export PATH=$ENVDIR/bioenv3.6/bin:$PATH       # python 3.6.10 
+#export PATH=$ENVDIR/bioenv3.7/bin:$PATH       # python 3.7.6
+#export PATH=$ENVDIR/bioenv3.8/bin:$PATH       # python 3.8.2
+
+# development
+export npm_config_prefix=$ZJHOME/.nodejs
+export GOPATH=$ZJHOME/.go
+export PATH=$GOPATH/bin:$PATH
+export ANVIO_PORT=9999
+export PATH=$ZJHOME/.emacs.d/bin:$PATH
+export PATH=$ZJHOME/.cargo/bin:$PATH
+#export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
+#export RUSTUP_DIST_SERVER=https://mirrors.bfsu.edu.cn/rustup
+#export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
+#export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
+export PATH=$ZJHOME/.perl5/bin:$PATH
+export PATH=$npm_config_prefix/bin:$PATH
+export PATH=$ZJHOME/.aspera/connect/bin:$PATH
+
+# toolkit
+export PATH=$TOOLKIT/bin:$PATH
+export PATH=$TOOLKIT/sgetk/sgetk:$PATH
+export PATH=$TOOLKIT/asub:$PATH
+export PATH=$TOOLKIT/OAFilter/src:$PATH
+export PATH=$TOOLKIT/soap:$PATH 
+export PATH=$TOOLKIT/tmux-mem-cpu-load:$PATH 
+export PATH=$TOOLKIT/ANIcalculator_v1:$PATH 
+export PATH=$TOOLKIT/usearch/bin:$PATH 
+export PATH=$TOOLKIT/uchime/v4.2.40/bin:$PATH 
+#export PATH=$TOOLKIT/GraphBin:$PATH
+#export PATH=$TOOLKIT/GraphBin2:$PATH
+export PATH=$TOOLKIT/gfa1/bin:$PATH
+export PATH=$TOOLKIT/ed/bin:$PATH
+#export PATH=$TOOLKIT/dashing/release/linux:$PATH
+export PATH=$TOOLKIT/hifiasm-meta/bin:$PATH
+#export PATH=$TOOLKIT/EukCC/bin:$PATH
+#export PATH=$TOOLKIT/EukCC/scripts:$PATH
+#export PATH=$TOOLKIT/gmes_linux_64:$PATH
+
+#export NXF_CONDA_CACHEDIR=$ZJHOME/.conda/envs_nxf
