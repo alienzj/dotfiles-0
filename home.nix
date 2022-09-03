@@ -22,6 +22,7 @@
     userEmail = "alienchuj@gmail.com";
   }; 
 
+  home.file.".vimrc".source = ./vimrc;
 
   #xsession.enable = true;
   #xsession.windowManager.command = "...";
