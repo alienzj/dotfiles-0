@@ -1,6 +1,6 @@
 { pkgs, lib, ... }:
 let
-  merge = lib.foldr (a: b: a // b) {};
+  merge = lib.foldr (a: b: a // b) { };
 in
 {
   programs.firefox = {
@@ -12,7 +12,7 @@ in
     ];
     profiles = {
       default = {
-        name = "Default;
+        name = "Default";
         #settings = merge [
         #  (import ./config/annoyances.nix)
         #  (import ./config/browser-features.nix)

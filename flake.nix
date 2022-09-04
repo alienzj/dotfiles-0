@@ -9,18 +9,23 @@
       inputs.nixpkgs.follows = "nixpkgs"; 
     };
     
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
     dedsec-grub-theme = {
       url = gitlab:VandalByte/dedsec-grub-theme;
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = inputs:
+  outputs = { self, nur, nixpkgs, home-manager, dedsec-grub-theme }:
     let
-      ignoreme = ({ config, lib, ... }: with lib; {
-        system.nixos.revision = mkForce null;
-        system.nixos.versionSuffix = mkForce "pre-git";
-      });
+      #ignoreme = ({ config, lib, ... }: with lib; {
+      #  system.nixos.revision = mkForce null;
+      #  system.nixos.versionSuffix = mkForce "pre-git";
+      #});
 
       home-common = { lib, ... }: {
         nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
@@ -28,6 +33,10 @@
           "discord"
           "grammarly"
         ];  
+
+        nixpkgs.overlays = [
+          nur.overlay
+        ];
 
         programs.home-manager.enable = true;
         home.stateVersion = "22.05";
@@ -51,7 +60,7 @@
     in
     {
       nixosConfigurations = {
-        dyna = inputs.nixpkgs.lib.nixosSystem {
+        dyna = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
             ./system/configuration.nix
@@ -60,8 +69,8 @@
       };
 
       homeConfigurations = {
-        dyna = inputs.home-manager.lib.homeManagerConfiguration {
-          pkgs = inputs.nixpkgs.legacyPackages."x86_64-linux";
+        dyna = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages."x86_64-linux";
           modules = [
             home-common
             home-linux
