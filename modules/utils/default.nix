@@ -41,6 +41,10 @@
 
   programs.tmux = {
     enable = true;
+    terminal = "xterm-256color";
+    baseIndex = 0;
+    clock24 = true;
+    keyMode = "vi";
   };
  
 }
