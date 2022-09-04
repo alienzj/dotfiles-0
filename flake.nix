@@ -2,7 +2,9 @@
   description = "Home Manager flake";
 
   inputs = {
-    nixpkgs = { url = "github:nixos/nixpkgs/nixos-unstable"; };
+    nixpkgs = { 
+      url = "github:nixos/nixpkgs/nixos-unstable";
+    };
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -15,12 +17,26 @@
     };
     
     dedsec-grub-theme = {
-      url = gitlab:VandalByte/dedsec-grub-theme;
+      url = "gitlab:VandalByte/dedsec-grub-theme";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-doom-emacs = {
+      url = "github:nix-community/nix-doom-emacs";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
-  outputs = { self, nur, nixpkgs, home-manager, dedsec-grub-theme }:
+  outputs = { 
+    self,
+    nur,
+    nixpkgs,
+    home-manager,
+    dedsec-grub-theme,
+    nix-doom-emacs,
+    ...
+  }:
     let
       #ignoreme = ({ config, lib, ... }: with lib; {
       #  system.nixos.revision = mkForce null;
@@ -78,6 +94,7 @@
           modules = [
             home-common
             home-linux
+            nix-doom-emacs.hmModule
           ];
         };
       };
