@@ -54,7 +54,7 @@
 
         imports = [
           #./modules/thunderbird
-
+          ./modules/betterlockscreen
           ./modules/media
           ./modules/programming
         ];
