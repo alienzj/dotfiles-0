@@ -56,6 +56,7 @@
           #./modules/thunderbird
 
           ./modules/media
+          ./modules/programming
         ];
       };
 
