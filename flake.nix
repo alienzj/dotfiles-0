@@ -54,6 +54,8 @@
 
         imports = [
           #./modules/thunderbird
+
+          ./modules/media
         ];
       };
 
