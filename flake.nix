@@ -7,19 +7,17 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs"; 
     };
+    
+    dedsec-grub-theme = {
+      url = gitlab:VandalByte/dedsec-grub-theme;
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   
-  outputs = { nixpkgs, home-manager, ... }:
-    let
+  outputs = { self, nixpkgs, home-manager, dedsec-grub-theme, ... }: {
+    nixosConfigurations.dyna = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-    in {
-      homeConfigurations.alienzj = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        
-        modules = [
-          ./home.nix
-        ];
-      };
+      modules = [ ./home.nix ];
     };
+  };
 }
