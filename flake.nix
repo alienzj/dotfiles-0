@@ -35,6 +35,7 @@
         imports = [
           ./modules/bat
           ./modules/git
+          ./modules/firefox
         ];
       };
 
