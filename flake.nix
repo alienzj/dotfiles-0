@@ -63,7 +63,7 @@
     in
     {
       nixosConfigurations = {
-        dyna = nixpkgs.lib.nixosSystem {
+        yoga = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
             dedsec-grub-theme.nixosModule
@@ -73,7 +73,7 @@
       };
 
       homeConfigurations = {
-        dyna = home-manager.lib.homeManagerConfiguration {
+        yoga = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages."x86_64-linux";
           modules = [
             home-common
