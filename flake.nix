@@ -55,6 +55,7 @@
           ./modules/ui
           ./modules/media
           ./modules/browser
+          ./modules/editor
           ./modules/programming
         ];
       };
