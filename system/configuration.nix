@@ -26,7 +26,7 @@
   # boot.kernelModules = [ "i2c-dev" "i2c-piix4" "kvm-amd" ];
   boot.initrd.kernelModules = [ "amdgpu" ];
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "dyna"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
