@@ -1,4 +1,4 @@
-{ config, pkgs, stdenv, lib, ... };
+{ config, pkgs, stdenv, lib, ... }:
 {
   home.packages = with pkgs; [
     gnomeExtensions.appindicator
