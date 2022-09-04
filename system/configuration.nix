@@ -19,9 +19,12 @@
     grub = {
       enable = true;
       efiSupport = true;
-      device = "nodev";
+      devices = [ "nodev" ];
     };
   };
+
+  # boot.kernelModules = [ "i2c-dev" "i2c-piix4" "kvm-amd" ];
+  boot.initrd.kernelModules = [ "amdgpu" ];
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -57,6 +60,7 @@
 
   # Enable sound with pipewire.
   sound.enable = true;
+  hardware.bluetooth.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -89,17 +93,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-     emacs
-     wget
-     curl
-     git
-     htop
-     tmux
-     fish
-     zsh
-     home-manager
-     firefox
+    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -113,7 +107,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -130,5 +124,4 @@
   system.stateVersion = "22.05"; # Did you read the comment?
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
 }
