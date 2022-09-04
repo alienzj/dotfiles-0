@@ -53,5 +53,8 @@
     rustc
     rust-analyzer
     rustfmt
+
+    # nix
+    rnix-lsp
   ];
 }
