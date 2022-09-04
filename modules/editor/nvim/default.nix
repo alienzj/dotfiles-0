@@ -8,6 +8,7 @@
       nvim-dap
       nvim-dap-ui
       rust-tools-nvim
+      vim-nix
     ];
   };
 }
