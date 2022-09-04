@@ -42,9 +42,8 @@
         home.stateVersion = "22.05";
 
         imports = [
-          ./modules/bat
           ./modules/git
-          ./modules/firefox
+          ./modules/utils
         ];
       };
 
@@ -53,9 +52,9 @@
         home.homeDirectory = "/home/alienzj";
 
         imports = [
-          #./modules/thunderbird
-          ./modules/betterlockscreen
+          ./modules/ui
           ./modules/media
+          ./modules/browser
           ./modules/programming
         ];
       };
