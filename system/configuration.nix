@@ -18,8 +18,16 @@
     systemd-boot.enable = false;
     grub = {
       enable = true;
+      version = 2;
       efiSupport = true;
       devices = [ "nodev" ];
+      
+      dedsec-theme = {
+        enable = true;
+        style = "sitedown";
+        icon = "color";
+        resolution = "1080p";
+      };
     };
   };
 

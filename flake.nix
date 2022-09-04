@@ -66,6 +66,7 @@
         dyna = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
+            dedsec-grub-theme.nixosModule
             ./system/configuration.nix
           ];
         };
