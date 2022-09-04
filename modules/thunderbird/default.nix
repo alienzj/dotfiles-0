@@ -1,5 +1,0 @@
-{
-  prgrams.thunderbird = {
-    enable = true;
-  };
-}
