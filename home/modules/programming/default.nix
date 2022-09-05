@@ -17,6 +17,9 @@
     nodejs
     yarn
 
+    # Java
+    jdk
+
     # lua
     lua
 
@@ -34,6 +37,7 @@
     python3Packages.scikitimage
     python3Packages.parso
     python3Packages.twine
+    nodePackages.pyright
 
     # Jupyter
     jupyter
@@ -56,5 +60,12 @@
 
     # nix
     rnix-lsp
+
+    # snakemake
+    snakemake
+
+    # nextflow
+    nextflow
+
   ];
 }
