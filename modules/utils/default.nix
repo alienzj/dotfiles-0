@@ -7,6 +7,8 @@
     skim
     tealdeer
     fd
+    tree
+    diskus
   ];
 
   programs.aria2 = {
