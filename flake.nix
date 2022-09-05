@@ -69,6 +69,7 @@
 
         imports = [
           ./home/modules/users
+          ./home/modules/ui
           ./home/modules/multimedia
           ./home/modules/browser
           ./home/modules/editor
