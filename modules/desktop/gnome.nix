@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    genome.gnome-tweaks
+    gnome.gnome-tweaks
     gnomeExtensions.appindicator
     gnomeExtensions.dash-to-panel
   ];
