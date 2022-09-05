@@ -1,4 +1,14 @@
+{ pkgs, ... }:
+
 {
+  home.packages = with pkgs; [
+    moreutils
+    ripgrep
+    skim
+    tealdeer
+    fd
+  ];
+
   programs.aria2 = {
     enable = true;
   };

@@ -105,6 +105,7 @@
     wget
     curl
     git
+    binutils
     coreutils
   ];
 
