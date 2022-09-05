@@ -3,36 +3,48 @@
 { config, pkgs, ... }:
 {
   environment.gnome.excludePackages = (with pkgs; [
-    gnome.gnome-weather
-    gnome.gnome-calendar
-    gnome.gnome-maps
-    gnome.gnome-contacts
-    gnome.gnome-software
- ]) ++ (with pkgs; [
-    gnome.adwaita-icon-theme                 # gnome/core
-    gnome.dconf-editor                       # gnome/core
-    gnome.gnome-tweaks
-    gnome.gnome-2048
-    gnome.gnome-sudoku
-    gnome.gnome-mahjongg
-    gnome.eog                                # image viewer
-    gnome.evince                             # document viewer
-    gnome.cheese                             # webcam tool
-    gnome.gnome-music                        # music
-    gnome.gedit
-    gnome.totem                              # video player
-    gnome.epiphany                           # web browser
- 
+    gnome-tour
+    gnome-photos
+  ]) ++ (with pkgs.gnome; [
+    gnome-music
+    gnome-weather
+    gnome-maps
+    gnome-contacts
+    gnome-software
+    gnome-characters
+    gedit
+    epiphany
+    geary
+    totem
+    tali
+    iagno
+    hitori
+    atomix
+ ]);
 
-    gnomeExtensions.native-window-placement
-    gnomeExtensions.appindicator
-    gnomeExtensions.dash-to-panel
+  environment.systemPackages = (with pkgs.gnome; [
+    adwaita-icon-theme                 # gnome/core
+    dconf-editor                       # gnome/core
+    gnome-tweaks
+    eog                                # image viewer
+    evince                             # document viewer
+    cheese                             # webcam tool
+  ]) ++ (with pkgs.gnomeExtensions; [
+    native-window-placement
+    appindicator
+    dash-to-panel
   ]); 
 
 
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.displayManager.gdm.wayland = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  services.xserver = {
+    displayManager = {
+      gdm.enable = true;
+      gdm.wayland = true;
+    };
+    desktopManager = {
+      gnome.enable = true;
+    };
+  };
 
   programs.xwayland.enable = true;
 
