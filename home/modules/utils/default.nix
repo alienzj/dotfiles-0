@@ -4,14 +4,21 @@
   home.packages = with pkgs; [
     moreutils
     ripgrep
-    skim
     tealdeer
     fd
     tree
     diskus
   ];
 
+  programs.skim = {
+    enable = true;
+  };
+
   programs.aria2 = {
+    enable = true;
+  };
+
+  programs.rtorrent = {
     enable = true;
   };
 
@@ -56,6 +63,13 @@
 
   programs.pandoc = {
     enable = true;
+    #defaults = {
+    #  metadata = {
+    #    author = "Jie Zhu";
+    #  };
+    #  pdf-engine = "xelatex";
+    #  citeproc = true;
+    #};
   };
 
   programs.tmux = {
