@@ -54,11 +54,7 @@
           nur.overlay
         ];
 
-        programs.home-manager = {
-          enable = true;
-          useGlobalPkgs = true;
-          useUserPackages = true;
-        };
+        programs.home-manager.enable = true;
         home.stateVersion = "22.05";
 
         imports = [
