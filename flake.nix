@@ -70,7 +70,6 @@
         imports = [
           ./modules/users
           ./modules/desktop
-          ./modules/ui
           ./modules/multimedia
           ./modules/browser
           ./modules/editor
