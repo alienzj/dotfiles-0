@@ -15,7 +15,4 @@
     #theme = { name = "Nordic"; };
   };
 
-  services.dbus.packages = with pkgs; [
-    dconf
-  ];
 }

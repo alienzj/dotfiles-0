@@ -14,9 +14,9 @@
 
   programs.xwayland.enable = true;
 
-  #services.dbus.packages = with pkgs; [
-  #  gnome.dconf
-  #];
+  services.dbus.packages = with pkgs; [
+    gnome.dconf
+  ];
 
   services.udev.packages = with pkgs; [
     gnome.gnome-settings-daemon
