@@ -51,6 +51,8 @@
           "vscode-extension-ms-vscode-remote-remote-ssh"
           "vscode-extension-MS-python-vscode-pylance"
           "vscode-extension-ms-vscode-cpptools"
+          "spotify"
+          "spotify-unwrapped"
         ];  
 
         nixpkgs.overlays = [
