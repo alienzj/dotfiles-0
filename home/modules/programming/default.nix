@@ -73,6 +73,7 @@
   # TEX 
   programs.texlive = {
     enable = true;
+    packageSet = pkgs.texlive;
     extraPackages = tpkgs: {
       inherit (tpkgs) collection-basic collection-fontsrecommended algorithms; 
     };
