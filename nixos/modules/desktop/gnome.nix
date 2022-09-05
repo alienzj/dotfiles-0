@@ -7,13 +7,13 @@
   ];
 
   services.xserver.displayManager.gdm.enable = true;
-  services.xserver.displayManager.gdm.wayland = true;
+  #services.xserver.displayManager.gdm.wayland = true;
   services.xserver.desktopManager.gnome.enable = true;
 
-  programs.xwayland.enable = true;
+  #programs.xwayland.enable = true;
 
-  services.udev.packages = with pkgs; [
-    gnome.gnome-settings-daemon
-  ];
+  #services.udev.packages = with pkgs; [
+  #  gnome.gnome-settings-daemon
+  #];
 
 }

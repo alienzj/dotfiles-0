@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 {
-  environment.systemPackages = with pkgs; [
-    wl-clipboard
-  ];
+  #environment.systemPackages = with pkgs; [
+  #  wl-clipboard
+  #];
 }
