@@ -53,6 +53,12 @@
 
       formulahendry.code-runner
     ];
+
+    userSettings = {
+      "update.channel" = "none";
+      "[nix]"."editor.tabSize" = 2;
+
+    };
   };
 
 }
