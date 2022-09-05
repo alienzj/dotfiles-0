@@ -17,9 +17,6 @@
     nodejs
     yarn
 
-    # Java
-    jdk
-
     # lua
     lua
 
@@ -67,6 +64,11 @@
     # nextflow
     nextflow
   ];
+
+  # Java
+  programs.java = {
+    enable = true;
+  };
 
   # TEX 
   programs.texlive = {
