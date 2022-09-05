@@ -11,7 +11,7 @@
       # python
       ms-python.python
       ms-python.vscode-pylance
-      ms-python.pyright
+      ms-pyright.pyright
 
       # jupyter
       ms-toolsai.jupyter
