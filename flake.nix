@@ -48,6 +48,7 @@
           "zoom"
           "discord"
           "grammarly"
+          "vscode-extension-ms-vscode-remote-remote-ssh"
         ];  
 
         nixpkgs.overlays = [
