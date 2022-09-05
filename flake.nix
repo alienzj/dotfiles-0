@@ -58,8 +58,8 @@
         home.stateVersion = "22.05";
 
         imports = [
-          ./modules/git
-          ./modules/utils
+          ./home/modules/git
+          ./home/modules/utils
         ];
       };
 
@@ -68,12 +68,11 @@
         home.homeDirectory = "/home/alienzj";
 
         imports = [
-          ./modules/users
-          ./modules/desktop
-          ./modules/multimedia
-          ./modules/browser
-          ./modules/editor
-          ./modules/programming
+          ./home/modules/users
+          ./home/modules/multimedia
+          ./home/modules/browser
+          ./home/modules/editor
+          ./home/modules/programming
         ];
       };
 
@@ -85,6 +84,7 @@
           modules = [
             dedsec-grub-theme.nixosModule
             ./nixos/configuration.nix
+            ./home/modules/desktop
           ];
         };
       };
