@@ -7,7 +7,7 @@
     nordic
   ];
 
-  environment.systemPackages = [
+  environment.systemPackages = with pkgs; [
     gnome.adwaita-icon-theme
   ];
 
