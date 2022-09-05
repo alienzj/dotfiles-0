@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 {
   home.packages = with pkgs; [
     lxappearance
@@ -14,4 +14,8 @@
     theme = { name = "Adwaita"; };
     #theme = { name = "Nordic"; };
   };
+
+  services.dbus.packages = with pkgs; [
+    dconf
+  ];
 }
