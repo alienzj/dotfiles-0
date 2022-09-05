@@ -8,7 +8,6 @@
     gnome.gnome-maps
     gnome.gnome-contacts
     gnome.gnome-software
-    gnome.gnome-tour
  ]) ++ (with pkgs; [
     gnome.adwaita-icon-theme                 # gnome/core
     gnome.dconf-editor                       # gnome/core
