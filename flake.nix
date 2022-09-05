@@ -85,7 +85,6 @@
           modules = [
             dedsec-grub-theme.nixosModule
             ./nixos/configuration.nix
-            ./home/modules/desktop
           ];
         };
       };
