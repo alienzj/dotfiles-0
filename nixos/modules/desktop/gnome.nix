@@ -1,11 +1,15 @@
+# reference https://nixos.wiki/wiki/GNOME
+
 { config, pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
+    gnome.adwaita-icon-theme
     gnome.dconf-editor
     gnome.gnome-tweaks
     gnomeExtensions.native-window-placement
     gnomeExtensions.appindicator
     gnomeExtensions.dash-to-panel
+    
   ];
 
   services.xserver.displayManager.gdm.enable = true;
@@ -30,4 +34,7 @@
 
   programs.gnome-terminal.enable = false;
   programs.geary.enable = false;          # email reader
+
+  programs.dconf.enable = true;
+  #services.dbus.packages = with pkgs; [ dconf ];
 }
