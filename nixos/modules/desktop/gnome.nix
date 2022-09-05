@@ -14,10 +14,6 @@
 
   programs.xwayland.enable = true;
 
-  services.dbus.packages = with pkgs; [
-    gnome.dconf
-  ];
-
   services.udev.packages = with pkgs; [
     gnome.gnome-settings-daemon
   ];
@@ -28,10 +24,10 @@
     gnome.gnome-maps
     gnome.gnome-contacts
     gnome.gnome-software
-    gnome.totem
-    gnome.epiphany
+    gnome.totem           # video player
+    gnome.epiphany        # web browser
   ];
 
   programs.gnome-terminal.enable = false;
-  programs.geary.enable = false;
+  programs.geary.enable = false;          # email reader
 }

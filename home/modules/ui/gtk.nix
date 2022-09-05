@@ -7,6 +7,10 @@
     nordic
   ];
 
+  environment.systemPackages = [
+    gnome.adwaita-icon-theme
+  ];
+
   gtk = {
     enable = true;
     iconTheme = { name = "Adwaita"; };
@@ -14,5 +18,7 @@
     theme = { name = "Adwaita"; };
     #theme = { name = "Nordic"; };
   };
+
+  programs.dconf.enable = true;
 
 }
