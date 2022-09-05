@@ -2,15 +2,34 @@
 
 { config, pkgs, ... }:
 {
-  environment.systemPackages = with pkgs; [
-    gnome.adwaita-icon-theme
-    gnome.dconf-editor
+  environment.gnome.excludePackages = (with pkgs; [
+    gnome-weather
+    gnome-calendar
+    gnome-maps
+    gnome-contacts
+    gnome-software
+    gnome-tour
+ ]) ++ (with pkgs; ) [
+    gnome.adwaita-icon-theme                 # gnome/core
+    gnome.dconf-editor                       # gnome/core
     gnome.gnome-tweaks
+    gnome.gnome-2048
+    gnome.gnome-sudoku
+    gnome.gnome-mahjongg
+    gnome.eog                                # image viewer
+    gnome.evince                             # document viewer
+    gnome.cheese                             # webcam tool
+    gnome.gnome-music                        # music
+    gnome.gedit
+    gnome.totem                              # video player
+    gnome.epiphany                           # web browser
+ 
+
     gnomeExtensions.native-window-placement
     gnomeExtensions.appindicator
     gnomeExtensions.dash-to-panel
-    
-  ];
+  ]; 
+
 
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.displayManager.gdm.wayland = true;
@@ -20,16 +39,6 @@
 
   services.udev.packages = with pkgs; [
     gnome.gnome-settings-daemon
-  ];
-
-  environment.gnome.excludePackages = with pkgs; [
-    gnome.gnome-weather
-    gnome.gnome-calendar
-    gnome.gnome-maps
-    gnome.gnome-contacts
-    gnome.gnome-software
-    gnome.totem           # video player
-    gnome.epiphany        # web browser
   ];
 
   programs.gnome-terminal.enable = false;
