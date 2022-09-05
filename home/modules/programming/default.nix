@@ -66,6 +66,13 @@
 
     # nextflow
     nextflow
-
   ];
+
+  # TEX 
+  programs.texlive = {
+    enable = true;
+    extraPackages = tpkgs: {
+      inherit (tpkgs) collection-basic collection-fontsrecommended algorithms; 
+    };
+  };
 }
