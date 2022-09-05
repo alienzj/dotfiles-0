@@ -9,7 +9,7 @@
     gnome-contacts
     gnome-software
     gnome-tour
- ]) ++ (with pkgs; ) [
+ ]) ++ (with pkgs; [
     gnome.adwaita-icon-theme                 # gnome/core
     gnome.dconf-editor                       # gnome/core
     gnome.gnome-tweaks
@@ -28,7 +28,7 @@
     gnomeExtensions.native-window-placement
     gnomeExtensions.appindicator
     gnomeExtensions.dash-to-panel
-  ]; 
+  ]); 
 
 
   services.xserver.displayManager.gdm.enable = true;
