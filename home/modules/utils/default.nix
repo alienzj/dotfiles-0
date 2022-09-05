@@ -4,11 +4,23 @@
   home.packages = with pkgs; [
     moreutils
     ripgrep
-    tealdeer
     fd
     tree
     diskus
   ];
+
+  programs.tealdeer = {
+    enable = true;
+    settings = {
+      display = {
+        compact = false;
+        use_pager = true;
+      };
+      updates = {
+        auto_update = false;
+      };
+    };
+  };
 
   programs.skim = {
     enable = true;
