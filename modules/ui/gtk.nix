@@ -9,7 +9,7 @@
 
   gtk = {
     enable = true;
-    iconTheme = { name = "nordic"; };
-    theme = { name = "nordic"; };
+    iconTheme = { name = "Nordic"; };
+    theme = { name = "Nordic"; };
   };
 }
