@@ -1,10 +1,9 @@
 {
   imports = [
-    ./gnome.nix
+    ./gtk.nix
   ];
 
   services.betterlockscreen = {
     enable = true;
   };
 }
-
