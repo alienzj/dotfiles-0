@@ -1,27 +1,26 @@
-{ config, lib, pkgs, ... }:
+# Generated via dconf2nix: https://github.com/gvolpe/dconf2nix
+{ lib, ... }:
 
-let
-  left = "h";
-  down = "j";
-  up = "k";
-  right = "l";
-in {
-  dconf.settings = with lib.hm.gvariant; {
-    #"org/gnome/desktop/interface" = {
-    #  "icon-theme" = "Adwaita";
-    #  "theme" = "Adwaita";
-    #};
+with lib.hm.gvariant;
 
+{
+  dconf.settings = {
     "org/gnome/desktop/background" = {
-      picture-uri = "file://${../../data}/wallpapers/0127_girl-rain-koba-sewer.jpg";
       picture-options = "zoom";
+      picture-uri = "file://${../../data}/wallpapers/0127_girl-rain-koba-sewer.jpg";
     };
+
+    #"org/gnome/desktop/interface" = {
+    #  gtk-theme = "Adwaita";
+    #  icon-theme = "Adwaita";
+    #};
 
     "org/gnome/desktop/lockdown" = {
       disable-lock-screen = false;
     };
 
     "org/gnome/shell" = {
+      always-show-log-out = true;
       disable-user-extensions = false;
       enabled-extensions = [
         "appindicatorsupport@rgcjonas.gmail.com"
@@ -32,7 +31,7 @@ in {
     };
 
     "org/gnome/shell/extensions/dash-to-panel" = {
-      animate-appicon-hover-animation-extent="{'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}";
+      animate-appicon-hover-animation-extent = "{'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}";
       appicon-margin = 4;
       appicon-padding = 4;
       available-monitors = "[0]";
@@ -50,6 +49,6 @@ in {
       tray-padding = -1;
       window-preview-title-position = "TOP";
     };
+
   };
 }
-
