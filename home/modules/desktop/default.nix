@@ -4,8 +4,4 @@
     ./wayland.nix
     ./gnome.nix
   ];
-
-  services.betterlockscreen = {
-    enable = true;
-  };
 }
