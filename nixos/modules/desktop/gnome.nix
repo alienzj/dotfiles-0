@@ -35,6 +35,18 @@
     dash-to-panel
   ]); 
 
+  # GNOME without the apps
+  # services.gnome.core-utilities.enable = false;
+
+  # GNOME games
+  # services.gnome.games.enable = true;
+
+  # GNOME core developer tools
+  # services.gnome.core-developer-tools.enable = true;
+
+  # Disabling GNOME indexing files service
+  services.gnome.tracker-miners.enable = false;
+  services.gnome.tracker.enable = false;
 
   services.xserver = {
     displayManager = {
@@ -56,5 +68,7 @@
   programs.geary.enable = false;          # email reader
 
   programs.dconf.enable = true;
+  #options.dconf.enable = true;
   #services.dbus.packages = with pkgs; [ dconf ];
+
 }
