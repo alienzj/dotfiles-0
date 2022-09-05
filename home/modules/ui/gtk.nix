@@ -5,6 +5,7 @@
     dracula-theme
     papirus-icon-theme
     nordic
+    dconf2nix
   ];
 
   gtk = {
@@ -14,5 +15,4 @@
     theme = { name = "Adwaita"; };
     #theme = { name = "Nordic"; };
   };
-
 }
