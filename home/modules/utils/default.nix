@@ -45,6 +45,13 @@
 
   programs.nnn = {
     enable = true;
+    bookmarks = {
+      d = "~/documents";
+      D = "~/downlods";
+      p = "~/pictures";
+      m = "~/music";
+      v = "~/videos";
+    };
   };
 
   programs.pandoc = {
