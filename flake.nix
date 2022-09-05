@@ -68,6 +68,7 @@
         home.homeDirectory = "/home/alienzj";
 
         imports = [
+          ./modules/users
           ./modules/ui
           ./modules/media
           ./modules/browser
