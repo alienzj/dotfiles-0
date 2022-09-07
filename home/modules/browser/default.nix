@@ -33,7 +33,7 @@ in
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
           "identity.fxaccounts.account.device.name" = config.networking.hostName;
         };
-        userChrome = builtins.readFile ./cascade/userChrome.css;
+        userChrome = builtins.readFile ./userChrome.css;
       };
       shit = {
         name = "crap";
