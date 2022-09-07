@@ -28,11 +28,11 @@ in
         #  (import ./config/tracking.nix)
         #  (import ./config/security.nix)
         #];
-        settings = [
+        settings = {
           "browser.startup.homepage" = "https://alienzj.github.io/Bento";
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
           "identity.fxaccounts.account.device.name" = config.networking.hostName;
-        ];
+        };
         userChrome = builtins.readFile ./cascade/userChrome.css;
       };
       shit = {
