@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
   home.packages = with pkgs; [
-    xpdf
+    #xpdf
     zotero
     thunderbird
     libreoffice
