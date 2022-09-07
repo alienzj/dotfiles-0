@@ -9,7 +9,7 @@
       noto-fonts-cjk
       noto-fonts-emoji
       cascadia-code
-      libreration_ttf
+      liberation_ttf
       fira-code
       fira-code-symbols
       mplus-outline-fonts
