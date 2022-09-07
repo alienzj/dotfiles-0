@@ -1,21 +1,19 @@
 # reference: https://nixos.wiki/wiki/Fonts
 
 { config, pkgs, lib, ... }:
+
 {
 
   home.packages = with pkgs; [
-      meslo-lg 
-      noto-fonts
-      noto-fonts-cjk
-      noto-fonts-emoji
-      cascadia-code
-      liberation_ttf
-      fira-code
-      fira-code-symbols
-      mplus-outline-fonts
-      dina-font
-      proggyfonts
-    ];
+    meslo-lg 
+    noto-fonts
+    noto-fonts-cjk
+    noto-fonts-emoji
+    cascadia-code
+    liberation_ttf
+    fira-code
+    fira-code-symbols
+  ];
 
   fonts.fontconfig.enable = true;
   #fonts.fontconfig = {
