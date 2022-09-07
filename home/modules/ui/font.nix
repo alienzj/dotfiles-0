@@ -3,7 +3,7 @@
 { config, pkgs, lib, ... }:
 {
   fonts = {
-    fonts = with pkgs; {
+    fonts = with pkgs; [
       meso-lg 
       noto-fonts
       noto-fonts-cjk
@@ -15,7 +15,7 @@
       mplus-outline-fonts
       dina-font
       proggyfonts
-    };
+    ];
 
     #fontconfig = {
     #  serif = ["Noto-Serif"];
