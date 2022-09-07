@@ -53,6 +53,7 @@
           "spotify"
           "spotify-unwrapped"
           "tampermonkey"
+          "enhancer-for-youtube"
         ];  
 
         #nixpkgs.overlays =

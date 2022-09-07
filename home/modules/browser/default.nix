@@ -29,9 +29,11 @@ in
         #  (import ./config/security.nix)
         #];
         settings = {
+          "app.update.auto" = false;
           "browser.startup.homepage" = "https://alienzj.github.io/Bento";
-          "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
           "identity.fxaccounts.account.device.name" = "yoga";
+          "signon.rememberSignons" = false;
+          "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
         };
         userChrome = builtins.readFile ./userChrome.css;
       };
