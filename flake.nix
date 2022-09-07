@@ -52,6 +52,7 @@
           "vscode-extension-ms-vscode-cpptools"
           "spotify"
           "spotify-unwrapped"
+          "tampermonkey"
         ];  
 
         #nixpkgs.overlays =
