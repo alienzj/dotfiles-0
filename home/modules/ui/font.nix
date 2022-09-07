@@ -4,7 +4,7 @@
 {
   fonts = {
     fonts = with pkgs; [
-      meso-lg 
+      meslo-lg 
       noto-fonts
       noto-fonts-cjk
       noto-fonts-emoji
