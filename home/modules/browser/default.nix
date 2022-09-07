@@ -1,17 +1,25 @@
-{ pkgs, lib, ... }:
+{ config, pkgs, lib, ... }:
+
 let
   merge = lib.foldr (a: b: a // b) { };
 in
 {
   programs.firefox = {
     enable = true;
-    package = if pkgs.stdenv.isLinux then pkgs.firefox else pkgs.firefox-bin;
     extensions = with pkgs.nur.repos.rycee.firefox-addons; [
       grammarly
       ublock-origin
+      vimium 
+      tampermonkey
+      rust-search-extension
+      c-c-search-extension
+      darkreader
+      enhancer-for-youtube
+      privacy-badger
     ];
     profiles = {
       default = {
+        id = 0;
         name = "Default";
         #settings = merge [
         #  (import ./config/annoyances.nix)
@@ -20,6 +28,12 @@ in
         #  (import ./config/tracking.nix)
         #  (import ./config/security.nix)
         #];
+        settings = [
+          "browser.startup.homepage" = "https://alienzj.github.io/Bento";
+          "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+          "identity.fxaccounts.account.device.name" = config.networking.hostName;
+        ];
+        userChrome = builtins.readFile ./cascade/userChrome.css;
       };
       shit = {
         name = "crap";
@@ -27,4 +41,16 @@ in
       };
     };
   };
+
+  
+  # firefox nightly
+  #home.packages = with pkgs; [
+  #  latest.firefox-nightly-bin
+  #];
+
+  programs.browserpass = {
+    enable = true;
+    browsers = [ "firefox" ];
+  };
 }
+

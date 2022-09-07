@@ -7,8 +7,8 @@
     gnome-photos
   ]) ++ (with pkgs.gnome; [
     gnome-music
-    gnome-weather
-    gnome-maps
+    #gnome-weather
+    #gnome-maps
     gnome-contacts
     gnome-software
     gnome-characters
@@ -31,7 +31,7 @@
     cheese                             # webcam tool
   ]) ++ (with pkgs.gnomeExtensions; [
     native-window-placement
-    appindicator
+    #appindicator
     dash-to-panel
   ]); 
 
