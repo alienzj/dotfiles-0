@@ -3,6 +3,7 @@
   home.packages = with pkgs; [
     #xpdf
     zotero
+    calibre
     thunderbird
     libreoffice
   ];
