@@ -57,7 +57,7 @@
     userSettings = {
       "update.channel" = "none";
       "[nix]"."editor.tabSize" = 2;
-      "workbench.colorTheme" = "One Dark Pro";
+      "workbench.colorTheme" = "One Dark";
       "window.dialogStyle" = "custom";
       "window.titleBarStyle" = "custom";
 
