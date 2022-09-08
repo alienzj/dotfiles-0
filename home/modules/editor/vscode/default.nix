@@ -58,6 +58,8 @@
       "update.channel" = "none";
       "[nix]"."editor.tabSize" = 2;
       "workbench.colorTheme" = "One Dark Pro";
+      "window.dialogStyle" = "custom";
+      "window.titleBarStyle" = "custom";
 
     };
   };
