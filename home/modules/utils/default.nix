@@ -86,19 +86,19 @@
 
   programs.tmux = {
     enable = true;
-    terminal = "xterm-256color";
-    baseIndex = 0;
-    clock24 = true;
-    newSession = true;
-    sensibleOnTop = true;
-    prefix = "C-a";
-    keyMode = "vi";
-    aggressiveResize = true;
+    #terminal = "xterm-256color";
+    #baseIndex = 0;
+    #clock24 = true;
+    #newSession = true;
+    #sensibleOnTop = true;
+    #prefix = "C-a";
+    #keyMode = "vi";
+    #aggressiveResize = true;
     extraConfig = builtins.readFile ./tmux.conf;
-    plugins = with pkgs; [
-      tmuxPlugins.pain-control
-      tmuxPlugins.sessionist
-    ];
+    #plugins = with pkgs; [
+    #  tmuxPlugins.pain-control
+    #  tmuxPlugins.sessionist
+    #];
   };
  
 }
