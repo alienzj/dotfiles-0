@@ -80,8 +80,8 @@ in {
   # For mount.cifs, required unless domain name resolution is not needed.
   environment.systemPackages = [ pkgs.cifs-utils ];
 
-  fileSystems."/mnt/share/magic_public" = {
-      device = "//10.132.2.33/Share/Public";
+  fileSystems."/mnt/share/MagIC/Public" = {
+      device = "//hkfile.magic.local/Share/Public";
       fsType = "cifs";
       options = let
         # this line prevents hanging on network split
@@ -90,7 +90,27 @@ in {
       in ["${automount_opts},credentials=/etc/nixos/smb-secrets"];
   };
 
+  fileSystems."/mnt/share/MagIC/Department" = {
+      device = "//hkfile.magic.local/Department";
+      fsType = "cifs";
+      options = let
+        # this line prevents hanging on network split
+        automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
+
+      in ["${automount_opts},credentials=/etc/nixos/smb-secrets"];
+  };
+
+
+
   services.gvfs.enable = true;
+
+
+  # printing
+  services.printing.enable = true;
+  #services.printing.drivers = [];
+  services.avahi.enable = true;
+  services.avahi.nssmdns = true;
+
 
 }
 
