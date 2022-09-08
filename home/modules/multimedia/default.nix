@@ -20,4 +20,19 @@
       pkgs.obs-studio-plugins.wlrobs
     ];
   };
+
+  services.flameshot = {
+    enable = true;
+    settings = {
+      # https://github.com/flameshot-org/flameshot/blob/master/flameshot.example.ini
+      General = {
+        disabledTrayIcon = false;
+        showStartupLaunchMessage = true;
+        savePath = "/home/alienzj/downloads/flameshot";
+        saveAsFileExtension = ".png";
+        ignoreUpdateToVersion = true;
+      }; 
+    };
+  };
+
 }
