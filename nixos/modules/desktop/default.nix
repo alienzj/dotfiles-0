@@ -1,7 +1,7 @@
 {
   imports = [
-    ./X11.nix
+    ./xserver.nix
     ./wayland.nix
-    ./gnome.nix
+    ./gnome/gnome.nix
   ];
 }

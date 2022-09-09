@@ -1,0 +1,6 @@
+{
+  services.taffbar = {
+    enable = true;
+  };
+
+};
