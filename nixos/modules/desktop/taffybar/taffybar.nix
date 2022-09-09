@@ -1,6 +1,5 @@
 {
-  services.taffbar = {
+  services.taffybar = {
     enable = true;
   };
-
 }
