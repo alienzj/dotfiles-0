@@ -7,7 +7,7 @@
 
     ./xmond/xmonad.nix
     ./picom/picom.nix
-    ./taffybar/taffybar.nix
-    #./polybar/polybar.nix
+    #./taffybar/taffybar.nix
+    ./polybar/polybar.nix
   ];
 }
