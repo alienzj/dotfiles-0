@@ -13,7 +13,7 @@
     liberation_ttf
     fira-code
     fira-code-symbols
-    hack
+    hack-font
   ];
 
   fonts.fontconfig.enable = true;
