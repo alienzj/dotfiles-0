@@ -12,6 +12,8 @@
     cabal2nix
     haskellPackages.cabal-install
     haskellPackages.stack
+    haskellPackages.haskell-language-server
+    haskellPackages.hoogle
 
     # JavaScript
     nodejs
