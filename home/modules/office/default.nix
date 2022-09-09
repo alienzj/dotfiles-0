@@ -6,6 +6,7 @@
     calibre
     thunderbird
     libreoffice
+    zoom-us
   ];
 
   services.syncthing = {
