@@ -25,11 +25,17 @@
       url = "github:nix-community/nix-doom-emacs";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    taffybar = {
+      url = "github:sherubthakur/taffybar";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { 
     self,
     nur,
+    taffybar,
     nixpkgs,
     home-manager,
     dedsec-grub-theme,

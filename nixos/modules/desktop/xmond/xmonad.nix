@@ -28,4 +28,6 @@
 
     config = ./config.hs;
   };
+
+  programs.dconf.enable = true;
 }

@@ -5,9 +5,17 @@
 
     #./gnome/gnome.nix
 
-    ./xmond/xmonad.nix
-    ./picom/picom.nix
+    #./xmond/xmonad.nix
+    ./xmond
+
+    #./picom/picom.nix
+    ./picom
+
     #./taffybar/taffybar.nix
-    ./polybar/polybar.nix
+    ./taffybar
+
+    #./polybar/polybar.nix
+    #./polybar
+
   ];
 }

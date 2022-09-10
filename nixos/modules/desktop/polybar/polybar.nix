@@ -1,3 +1,5 @@
+{ config, lib, pkgs, ... }:
+
 {
   services.polybar = {
     enable = true;
