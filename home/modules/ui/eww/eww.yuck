@@ -1,6 +1,6 @@
 ;;  Profile vars 
-(defvar NAME "Sherub Thakur")
-(defpoll DOTFILES :interval "10m" "echo \"/home/sherub/.dotfiles\"")
+(defvar NAME "Jie Zhu")
+(defpoll DOTFILES :interval "10m" "echo \"/home/alienzj/.dotfiles\"")
 (defpoll UNAME :interval "5m"  "whoami")
 
 ;;  System vars 
@@ -169,14 +169,14 @@
       (box :space-evenly "false"  
         (label :class "hdd_label" :wrap "true" :limit-width 25 :text FREE)))
     (box :orientation "h" :space-evenly "false"  
-      (button :class "iconfolder1" :onclick "eww close-all && nautilus ~/Documents &" "")
-      (button :class "label_folder1" :onclick "eww close-all && nautilus ~/Documents &" "Documents"))
+      (button :class "iconfolder1" :onclick "eww close-all && nautilus ~/documents &" "")
+      (button :class "label_folder1" :onclick "eww close-all && nautilus ~/documents &" "Documents"))
     (box :orientation "h" :space-evenly "false"  
-      (button :class "iconfolder2" :onclick "eww close-all && nautilus ~/Downloads &" "")
-      (button :class "label_folder2" :onclick "eww close-all && nautilus ~/Downloads &" "Downloads"))
+      (button :class "iconfolder2" :onclick "eww close-all && nautilus ~/downloads &" "")
+      (button :class "label_folder2" :onclick "eww close-all && nautilus ~/downloads &" "Downloads"))
     (box :orientation "h" :space-evenly "false"  
-      (button :class "iconfolder4" :onclick "eww close-all && nautilus ~/Pictures &" "")
-      (button :class "label_folder4" :onclick "eww close-all && nautilus ~/Pictures &" "Pictures"))
+      (button :class "iconfolder4" :onclick "eww close-all && nautilus ~/pictures &" "")
+      (button :class "label_folder4" :onclick "eww close-all && nautilus ~/pictures &" "Pictures"))
     (box :orientation "h" :space-evenly "false"  
       (button :class "iconfolder5" :onclick "eww close-all && nautilus ~/.dotfiles &" "")
       (button :class "label_folder5" :onclick "eww close-all && nautilus ~/.dotfiles &" "Dotfiles"))))
