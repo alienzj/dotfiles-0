@@ -51,7 +51,7 @@
       home-common = { lib, ... }: {
 
         _module.args = {
-          colorscheme = import ./colorscheme/tokyonight.nix;
+          colorscheme = import ./colorschemes/tokyonight.nix;
         };
 
         nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
