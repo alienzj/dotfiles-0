@@ -79,6 +79,7 @@
         #  ];
         nixpkgs.overlays = [
           nur.overlay
+          taffybar.overlay
         ];
 
         programs.home-manager.enable = true;
