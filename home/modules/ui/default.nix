@@ -1,14 +1,13 @@
 {
   imports = [
-    ./gtk.nix
+    #./gtk.nix
     ./dconf.nix
     ./font.nix
 
-    #./eww/eww.nix
+    ./gtk
     ./eww
-
-    #./rofi/rofi.nix
     ./rofi
+    ./deadd
   ];
 
   # reference: https://github.com/nix-community/home-manager/blob/master/modules/services/betterlockscreen.nix

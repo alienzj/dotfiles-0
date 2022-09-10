@@ -12,7 +12,7 @@ rec {
   gtk-name = "Dracula";
   gtk-icon-name = "Moka";
   bat-theme-name = "Dracula";
-  deadd-css-file = ../modules/deadd/dracula.css;
+  deadd-css-file = ../home/modules/ui/deadd/dracula.css;
 
   bg-primary = black;
   bg-primary-bright = bright-black;
