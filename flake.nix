@@ -52,7 +52,7 @@
       {
 
         _module.args = {
-          colorscheme = import ./colorschemes/tokyonight.nix;
+          colorscheme = (import ./colorschemes/tokyonight.nix);
         };
 
         nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
