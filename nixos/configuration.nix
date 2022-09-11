@@ -146,14 +146,14 @@
     extra-sandbox-paths = ["/bin/sh=${pkgs.bash}/bin/sh"];
   };
 
-  #i18n.inputMethod.fcitx5 = {
-  #  enabled = true;
-  #  addons = with pkgs; [
-  #    fcitx5-rime
-  #  ];
-  #};
+  i18n.inputMethod.fcitx5 = {
+    #enabled = true;
+    addons = with pkgs; [
+      fcitx5-rime
+    ];
+  };
 
-  i18n.inputMethod.enabled = "ibus";
-  i18n.inputMethod.ibus.engines = with pkgs.ibus-engines; [ libpinyin ];
+  #i18n.inputMethod.enabled = "ibus";
+  #i18n.inputMethod.ibus.engines = with pkgs.ibus-engines; [ libpinyin ];
 
 }
