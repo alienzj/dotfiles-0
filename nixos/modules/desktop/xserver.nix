@@ -20,9 +20,11 @@
       enable = true;
 
       # disabling mouse acceleration
-      #mouse = {
-      #  accelProfile = "flat";
-      #};
+      mouse = {
+        #accelProfile = "flat";
+        accelProfile = "adaptive";
+        accelSpeed = "2.0";
+      };
 
       # disabling touchpad acceleration
       touchpad = {
@@ -31,7 +33,6 @@
         scrollMethod = "twofinger";
         tapping = true;
       };
-
 
     };
 
