@@ -4,7 +4,7 @@
   services.blueman.enable = true;
   services.xserver = {
     enable = true;
-    #dpi = 180;
+    dpi = 170;
     layout = "us";
     #xkbOptions = "caps:swapescape";
     xkbVariant = "";
