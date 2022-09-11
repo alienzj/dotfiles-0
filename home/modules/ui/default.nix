@@ -1,7 +1,7 @@
 {
   imports = [
     ./gtk.nix
-    ./dconf.nix
+    #./dconf.nix
     ./font.nix
     ./background.nix
   ];
