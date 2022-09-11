@@ -44,8 +44,35 @@
 
 
   services.autossh.sessions = [
-    pasteur_jupyter = {
+    {
+      name = "pasteur_jupyter";
+      user = "alienzj";
       extraArguments = "-N -f -L 8889:localhost:8888 pasteur_4222";
+    };
+    {
+      name = "pasteur_rstudio";
+      user = "alienzj";
+      extraArguments = "-N -f -L 8789:localhost:8787 pasteur_4222";
+    };
+    {
+      name = "pasteur_5222";
+      user = "alienzj";
+      extraArguments = "-N -f -L 5222:localhost:5222 pasteur_4222";
+    };
+    {
+      name = "pasteur_5225";
+      user = "alienzj";
+      extraArguments = "-N -f -L 5225:localhost:5225 pasteur_4222";
+    };
+    { 
+      name = "magic62_jupyter";
+      user = "alienzj";
+      extraArguments = "-N -f -L 8890:localhost:8888 MagIC_62";
+    };
+    {
+      name = "pasteur_rstudio";
+      user = "alienzj";
+      extraArguments = "-N -f -L 8790:localhost:8787 MagIC_62";
     }
   ];
 
