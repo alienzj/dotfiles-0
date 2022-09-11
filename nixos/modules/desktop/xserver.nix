@@ -23,7 +23,7 @@
       mouse = {
         #accelProfile = "flat";
         accelProfile = "adaptive";
-        accelSpeed = "2.0";
+        accelSpeed = "3.0";
       };
 
       # disabling touchpad acceleration
