@@ -3,8 +3,8 @@
     #./xserver.nix
     #./wayland.nix
 
-    #./xmonad
-    #./picom
+    ./xmonad
+    ./picom
     ./taffybar
     ./deadd
     ./eww

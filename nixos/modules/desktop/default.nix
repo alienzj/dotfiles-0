@@ -5,8 +5,8 @@
 
     #./gnome
 
-    ./xmonad
-    ./picom
+    #./xmonad
+    #./picom
     #./taffybar
     #./deadd
     #./eww
