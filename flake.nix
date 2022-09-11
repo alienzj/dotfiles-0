@@ -70,6 +70,11 @@
           "spotify-unwrapped"
           "tampermonkey"
           "enhancer-for-youtube"
+          "ngrok"
+          "unrar"
+          "slack"
+          "openpassword-password-manager"
+          "okta-browser-plugin"
         ];  
 
         #nixpkgs.overlays =
