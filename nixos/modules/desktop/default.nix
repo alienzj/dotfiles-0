@@ -1,8 +1,16 @@
 {
   imports = [
-    ./xserver.nix
+    #./xserver.nix
     #./wayland.nix
 
-    #./gnome/gnome.nix
+    #./gnome
+
+    ./xmonad
+    ./picom
+    ./taffybar
+    #./polybar
+    ./deadd
+    ./eww
+    ./rofi
   ];
 }
