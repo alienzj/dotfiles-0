@@ -48,7 +48,7 @@
       (box
         :class "face"
         :halign "center"
-        :style "background-image: url('${DOTFILES}/images/profile.jpg');")
+        :style "background-image: url('${DOTFILES}/home/data/images/profile.jpg');")
       (label :class "fullname" :halign "center" :wrap "true" :limit-width 25 :text NAME)
       (label :class "username" :halign "center" :wrap "true" :limit-width 25 :text UNAME))))
 
@@ -130,19 +130,19 @@
   (box :class "genwin"  
     (box :orientation "v" :halign "center" :valign "center" :space-evenly "false"  
         (button
-          :style "background-image: url('${DOTFILES}/images/icons/files.png');"
+          :style "background-image: url('${DOTFILES}/home/data/images/icons/files.png');"
           :class "app"
           :onclick "eww close-all && nautilus &")
         (button
-          :style "background-image: url('${DOTFILES}/images/icons/discord.png');"
+          :style "background-image: url('${DOTFILES}/home/data/images/icons/discord.png');"
           :class "app"
           :onclick "eww close-all && discord &")
         (button
-          :style "background-image: url('${DOTFILES}/images/icons/terminal.png');"
+          :style "background-image: url('${DOTFILES}/home/data/images/icons/terminal.png');"
           :class "app"
           :onclick "eww close-all && kitty &")
         (button
-          :style "background-image: url('${DOTFILES}/images/icons/slack.png');"
+          :style "background-image: url('${DOTFILES}/home/data/images/icons/slack.png');"
           :class "app"
           :onclick "eww close-all && slack &"))))
 
@@ -402,7 +402,7 @@
   :screen 1
   :geometry (geometry :x 3 :y 3 :width 43 :height 43)
   (button
-    :style "background-image: url('${DOTFILES}/images/icons/nixos.png');"
+    :style "background-image: url('${DOTFILES}/home/data/images/icons/nixos.png');"
     :class "btw-icon"
     :onclick "rofi -no-config -no-lazy-grab -show drun -modi drun -theme launcher &"))
 

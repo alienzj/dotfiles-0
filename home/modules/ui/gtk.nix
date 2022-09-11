@@ -32,7 +32,7 @@
 
   gtk = {
     enable = true;
-    #font = { name = "TeX Gyre Heros 10"; };
+    font = { name = "TeX Gyre Heros 10"; };
     iconTheme = { name = colorscheme.gtk-icon-name; };
     theme = { name = colorscheme.gtk-name; };
   };

@@ -96,7 +96,7 @@
     isNormalUser = true;
     description = "Jie Zhu";
     shell = pkgs.fish;
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" ];
   };
 
   # Allow unfree packages
@@ -140,5 +140,8 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "22.05"; # Did you read the comment?
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings = {
+    experimental-features = [ "nix-command" "flakes" ];
+    extra-sandbox-paths = ["/bin/sh=${pkgs.bash}/bin/sh"];
+  };
 }
