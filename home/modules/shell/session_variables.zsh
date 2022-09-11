@@ -15,8 +15,8 @@ export DOTFILES=~/.dotfiles
 # export ZSH=~/.oh-my-zsh
 export NVIM_TUI_ENABLE_TRUE_COLOR=1
 export EDITOR="nvim"
-export LC_ALL="en_US.UTF-8"
-export LANG="en_US.UTF-8"
+export LC_ALL="en_HK.UTF-8"
+export LANG="en_HK.UTF-8"
 
 # /usr/local/bin is mac specific and where brew installs stuff. As we are
 # making use of brew as fallback so we need to add it

@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
@@ -145,4 +145,12 @@
     experimental-features = [ "nix-command" "flakes" ];
     extra-sandbox-paths = ["/bin/sh=${pkgs.bash}/bin/sh"];
   };
+
+  i18n.inputMethod.fcitx5 = {
+    enabled = true;
+    addons = with pkgs; [
+      fcitx5-rime
+    ];
+  };
+
 }
