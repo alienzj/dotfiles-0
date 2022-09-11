@@ -251,8 +251,8 @@ myLayoutModifiers =
     gapLayoutSetup =
       gaps [(U, edgeGap), (R, edgeGap), (D, edgeGap), (L, edgeGap)]
 
-    screenBorder = Border {top = 5, bottom = 5, right = 5, left = 5}
-    windowBorder = Border {top = 5, bottom = 5, right = 5, left = 5}
+    screenBorder = Border {top = 8, bottom = 5, right = 5, left = 5}
+    windowBorder = Border {top = 8, bottom = 5, right = 5, left = 5}
     edgeGap = 4
 
 myScratchPads :: [NamedScratchpad]
