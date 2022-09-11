@@ -109,6 +109,8 @@
         imports = [
           ./home/modules/users
           ./home/modules/desktop
+          ./home/modules/terminal
+          ./home/modules/shell
           ./home/modules/ui
           ./home/modules/office
           ./home/modules/im

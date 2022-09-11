@@ -95,7 +95,8 @@
   users.users.alienzj = {
     isNormalUser = true;
     description = "Jie Zhu";
-    shell = pkgs.fish;
+    #shell = pkgs.fish;
+    shell = pkgs.zsh;
     extraGroups = [ "networkmanager" "wheel" "audio" ];
   };
 

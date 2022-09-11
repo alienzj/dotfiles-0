@@ -32,7 +32,6 @@ in
     unzip
     wireshark
     starship
-    zsh-syntax-highlighting
     zoxide
     bottom
     neofetch
@@ -154,16 +153,4 @@ in
       vim-tmux-navigator
     ];
   };
-
-  programs.zsh = {
-    enable = true;
-    enableAutosuggestions = true;
-    enableSyntaxHighlighting = true;
-    oh-my-zsh = {
-      enable = true;
-      plugins = [ "git" "thefuck" ];
-      theme = "lambda";
-    };
-  };
- 
 }

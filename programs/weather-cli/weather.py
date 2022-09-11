@@ -1,4 +1,4 @@
-#!/home/sherub/.nix-profile/bin/python3
+#!/home/alienzj/.nix-profile/bin/python3
 
 import json
 from argparse import ArgumentParser
