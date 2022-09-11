@@ -67,7 +67,7 @@
   programs.gnome-terminal.enable = false;
   programs.geary.enable = false;          # email reader
 
-  programs.dconf.enable = true;
+  #programs.dconf.enable = true;
   #options.dconf.enable = true;
   #services.dbus.packages = with pkgs; [ dconf ];
 

@@ -1,7 +1,7 @@
 { config, pkgs, colorscheme, ... }:
 
 {
-  programs.dconf.enable = true;
+#  programs.dconf.enable = true;
 
   xsession = {
     enable = true;

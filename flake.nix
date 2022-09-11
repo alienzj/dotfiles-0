@@ -48,12 +48,16 @@
       #  system.nixos.versionSuffix = mkForce "pre-git";
       #});
 
+      color-scheme = { lib, ... }:
+      {
+        _module.args = {
+          colorscheme = import ./colorschemes/tokyonight.nix;
+        };
+      };
+
+      #colorscheme = import ./colorschemes/tokyonight.nix;
       home-common = { lib, ... }:
       {
-
-        _module.args = {
-          colorscheme = (import ./colorschemes/tokyonight.nix);
-        };
 
         nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
           "zoom"
@@ -117,6 +121,7 @@
           modules = [
             dedsec-grub-theme.nixosModule
             ./nixos/configuration.nix
+            color-scheme
           ];
         };
       };
@@ -128,6 +133,7 @@
             home-common
             home-linux
             nix-doom-emacs.hmModule
+            color-scheme
           ];
         };
       };

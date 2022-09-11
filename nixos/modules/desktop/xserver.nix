@@ -21,4 +21,7 @@
       }
     ];
   };
+
+
+  programs.dconf.enable = true;
 }
