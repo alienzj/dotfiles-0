@@ -3,5 +3,6 @@
     ./nvim
     #./emacs
     ./vscode
+    ./rstudio
   ];
 }

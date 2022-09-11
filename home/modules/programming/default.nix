@@ -46,6 +46,7 @@
 
     # R
     R 
+    rPackages.quarto
     rPackages.tidyverse
     rPackages.tidymodels
     rPackages.vegan
