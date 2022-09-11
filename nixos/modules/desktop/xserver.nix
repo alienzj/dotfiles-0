@@ -28,8 +28,8 @@
       touchpad = {
         accelProfile = "flat";
         naturalScrolling = true;
-        scrollMethod="twofinger";
-        tapping="true";
+        scrollMethod = "twofinger";
+        tapping = true;
       };
 
 
