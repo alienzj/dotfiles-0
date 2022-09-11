@@ -5,8 +5,7 @@
 
     #./xmonad
     #./picom
-    #./taffybar
-    #./polybar
+    ./taffybar
     ./deadd
     ./eww
     ./rofi

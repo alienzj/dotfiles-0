@@ -7,7 +7,7 @@
 
     ./xmonad
     ./picom
-    ./taffybar
+    #./taffybar
     #./deadd
     #./eww
     #./rofi
