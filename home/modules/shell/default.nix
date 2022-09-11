@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, lib, ... }:
 {
   home.packages = with pkgs: [
     zsh-syntax-highlighting
