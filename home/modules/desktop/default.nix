@@ -3,12 +3,12 @@
     #./xserver.nix
     #./wayland.nix
 
-    ./xmonad
-    ./picom
-    ./taffybar
+    #./xmonad
+    #./picom
+    #./taffybar
     #./polybar
-    ./deadd
-    ./eww
+    #./deadd
+    #./eww
     ./rofi
   ];
 }

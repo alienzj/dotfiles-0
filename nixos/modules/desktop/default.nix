@@ -10,6 +10,6 @@
     ./taffybar
     ./deadd
     ./eww
-    ./rofi
+    #./rofi
   ];
 }
