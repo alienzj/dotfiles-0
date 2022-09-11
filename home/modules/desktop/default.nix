@@ -7,7 +7,7 @@
     #./picom
     #./taffybar
     #./polybar
-    #./deadd
+    ./deadd
     ./eww
     ./rofi
   ];

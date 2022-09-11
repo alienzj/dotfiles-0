@@ -8,7 +8,7 @@
     ./xmonad
     ./picom
     ./taffybar
-    ./deadd
+    #./deadd
     #./eww
     #./rofi
   ];
