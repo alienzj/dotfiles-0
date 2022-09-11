@@ -1,6 +1,6 @@
 {
   imports = [
-    #./xserver.nix
+    ./xserver.nix
     #./wayland.nix
 
     #./gnome
