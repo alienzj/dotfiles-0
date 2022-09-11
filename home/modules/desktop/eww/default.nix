@@ -23,6 +23,6 @@ in
 
   xsession.profileExtra = ''
     export DOTFILES=~/.dotfiles
-    #${builtins.readFile ../../.secrets/env-vars.sh}
+    ${builtins.readFile ../../../secrets/env-vars.sh}
   '';
 }
