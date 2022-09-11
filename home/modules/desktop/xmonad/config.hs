@@ -170,10 +170,10 @@ keysToAdd = launchers ++ multimediaKeys ++ layoutRelated
           spawn openWidgetsPanel
         ),
         ( (myModMask .|. controlMask, xK_4),
-          spawn "sleep 0.2 && scrot -s ~/Pictures/screenshots/scrot_%Y-%m-%d-%H%M%S.png"
+          spawn "sleep 0.2 && scrot -s ~/pictures/screenshots/scrot_%Y-%m-%d-%H%M%S.png"
         ),
         ( (myModMask .|. controlMask, xK_5),
-          spawn "sleep 0.2 && scrot -d 5 ~/Pictures/screenshots/scrot_%Y-%m-%d-%H%M%S.png"
+          spawn "sleep 0.2 && scrot -d 5 ~/pictures/screenshots/scrot_%Y-%m-%d-%H%M%S.png"
         )
       ]
 
