@@ -31,7 +31,7 @@ in
     unrar
     unzip
     wireshark
-    ostarship
+    starship
     zsh-syntax-highlighting
     zoxide
     bottom
