@@ -9,7 +9,8 @@
 
 .taffy-box {
 	border-style: solid;
-	padding: 5px;
+	#padding: 5px;
+	padding: 3px;
     	padding-left: 50px;
 	font-size: 8pt;
     	color: @font-color;
@@ -21,8 +22,8 @@
 }
 
 .contents {
-    	#padding: 5px 10px;
-    	padding: 3px 10px;
+    	padding: 5px 10px;
+    	#padding: 3px 10px;
 	transition: background-color .5s;
 	#border-radius: 20px;
 	border-radius: 12px;
@@ -33,8 +34,8 @@
 
 .workspaces {
     	border-style: solid;
-    	#border-radius: 20px;
-    	border-radius: 12px;
+    	border-radius: 20px;
+    	#border-radius: 12px;
     	border-left: 10px;
     	padding: 1px 10px 1px 10px;
     	background-color: @bg;
