@@ -4,7 +4,7 @@
   services.blueman.enable = true;
   services.xserver = {
     enable = true;
-    dpi = 180;
+    #dpi = 180;
     layout = "us";
     #xkbOptions = "caps:swapescape";
     xkbVariant = "";
@@ -28,6 +28,9 @@
       #touchpad = {
       #  accelProfile = "flat";
       #};
+
+      naturalScrolling = true;
+
     };
 
     desktopManager.session = [
@@ -44,11 +47,11 @@
   console.font =
     "${pkgs.terminus_font}/share/consolefonts/ter-u28n.psf.gz";
 
-  environment.variables = {
-    GDK_SCALE = "2";
-    GDK_DPI_SCALE = "0.5";
-    _JAVA_OPTIONS = "-Dsun.java2d.uiScale=2";
-  };
+  #environment.variables = {
+  #  GDK_SCALE = "2";
+  #  GDK_DPI_SCALE = "0.5";
+  #  _JAVA_OPTIONS = "-Dsun.java2d.uiScale=2";
+  #};
 
 
   programs.dconf.enable = true;

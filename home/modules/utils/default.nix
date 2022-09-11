@@ -121,6 +121,10 @@ in
     #};
   };
 
+  programs.direnv = {
+    enable = true;
+  };
+
   programs.tmux = {
     enable = true;
     terminal = "xterm-256color";

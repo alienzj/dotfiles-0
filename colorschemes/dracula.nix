@@ -10,7 +10,8 @@ rec {
   vim-name = "dracula";
   vim-statusline = "dracula";
   gtk-name = "Dracula";
-  gtk-icon-name = "Moka";
+  #gtk-icon-name = "Moka";
+  gtk-icon-name = "Papirus";
   bat-theme-name = "Dracula";
   deadd-css-file = ../home/modules/desktop/deadd/dracula.css;
 

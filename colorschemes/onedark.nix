@@ -9,8 +9,10 @@ rec {
   # too much effort though. Creating a whole theme for vim
   vim-name = "one-nvim";
   vim-statusline = "onedark";
-  gtk-name = "palenight";
-  gtk-icon-name = "Moka";
+  #gtk-name = "palenight";
+  gtk-name = "Nordic";
+  #gtk-icon-name = "Moka";
+  gtk-icon-name = "Papirus";
   bat-theme-name = "base16";
   deadd-css-file = ../home/modules/desktop/deadd/onedark.css;
 

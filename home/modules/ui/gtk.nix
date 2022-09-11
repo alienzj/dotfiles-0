@@ -28,6 +28,9 @@
     numix-icon-theme-square
     whitesur-icon-theme
     palenight-theme
+    papirus-icon-theme
+    nordic
+    dconf2nix
   ];
 
   gtk = {
