@@ -3,7 +3,7 @@
     #./xserver.nix
     #./wayland.nix
 
-    ./xmond
+    ./xmonad
     ./picom
     ./taffybar
     #./polybar
