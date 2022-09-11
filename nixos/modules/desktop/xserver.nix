@@ -25,11 +25,13 @@
       #};
 
       # disabling touchpad acceleration
-      #touchpad = {
-      #  accelProfile = "flat";
-      #};
+      touchpad = {
+        accelProfile = "flat";
+        naturalScrolling = true;
+        scrollMethod="twofinger";
+        tapping="true";
+      };
 
-      naturalScrolling = true;
 
     };
 
