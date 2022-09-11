@@ -9,7 +9,7 @@
     ./picom
     ./taffybar
     ./deadd
-    ./eww
+    #./eww
     #./rofi
   ];
 }

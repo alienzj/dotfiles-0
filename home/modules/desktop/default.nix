@@ -8,7 +8,7 @@
     #./taffybar
     #./polybar
     #./deadd
-    #./eww
+    ./eww
     ./rofi
   ];
 }
