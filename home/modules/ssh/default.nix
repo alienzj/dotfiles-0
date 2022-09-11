@@ -41,4 +41,12 @@
     hashKnownHosts = true;
     serverAliveInterval = 300;
   };
+
+
+  services.autossh.sessions = [
+    pasteur_jupyter = {
+      extraArguments = "-N -f -L 8889:localhost:8888 pasteur_4222";
+    }
+  ];
+
 }
