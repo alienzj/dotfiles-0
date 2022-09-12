@@ -62,7 +62,7 @@ myConfig =
       centerWidgets = map (>>= buildContentsBox) [windowsW],
       endWidgets = powerMenu : map (>>= buildContentsBox) [clock, tray],
       barPosition = Top,
-      barHeight = ExactSize 50,
+      barHeight = ExactSize 40,
       widgetSpacing = 10,
       monitorsAction = usePrimaryMonitor
     }
