@@ -8,7 +8,8 @@
     layout = "us";
     #xkbOptions = "caps:swapescape";
     xkbVariant = "";
-    videoDrivers = [ "amdgpu" ];
+    #videoDrivers = [ "amdgpu" ];
+    videoDrivers = [ "modesetting" ];
     #autoRepeatDelay = 200;
     #autoRepeatInterval = 20;
 
@@ -27,12 +28,12 @@
       };
 
       # disabling touchpad acceleration
-      touchpad = {
-        accelProfile = "flat";
-        naturalScrolling = true;
-        scrollMethod = "twofinger";
-        tapping = true;
-      };
+      #touchpad = {
+      #  accelProfile = "flat";
+      #  naturalScrolling = true;
+      #  scrollMethod = "twofinger";
+      #  tapping = true;
+      #};
 
     };
 
