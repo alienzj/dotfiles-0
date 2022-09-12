@@ -132,10 +132,29 @@
             color-scheme
           ];
         };
+
+        magic = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            dedsec-grub-theme.nixosModule
+            ./hosts/magic/configuration.nix
+            color-scheme
+          ];
+        };
       };
 
       homeConfigurations = {
         yoga = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages."x86_64-linux";
+          modules = [
+            home-common
+            home-linux
+            nix-doom-emacs.hmModule
+            color-scheme
+          ];
+        };
+
+        magic = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages."x86_64-linux";
           modules = [
             home-common
