@@ -44,6 +44,7 @@
 
       # haskell
       haskell.haskell
+      justusadam.language-haskell
 
       # latex
       james-yu.latex-workshop
