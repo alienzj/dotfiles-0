@@ -1,12 +1,15 @@
 { config, pkgs, lib, ... }:
 
+
 {
   home.packages = with pkgs; [
     vlc
     gimp-with-plugins
     inkscape-with-extensions
     blender
-    spotify
+    #spotify
+    #(wrapbin spotify "/bin/spotify" "--force-device-scale-factor 42")
+    (spotify.override { deviceScaleFactor = 1.66; })
     netease-cloud-music-gtk
   ];
 
@@ -35,5 +38,6 @@
     };
   };
 
-  spotify.override { deviceScaleFactor = 1.66; };
+  # https://github.com/NixOS/nixpkgs/pull/98350
+  #spotify.override { deviceScaleFactor = 1.66; }
 }
