@@ -16,6 +16,8 @@ in
     stress
     usbutils
 
+    plasma-browser-integration
+
     browser-media-control
     weather-cli
 
@@ -40,6 +42,9 @@ in
 
     xcwd
   ];
+
+  home.file.".mozilla/native-messaging-hosts/org.kde.plasma.browser_integration.json".source =
+    "${pkgs.plasma-browser-integration}/lib/mozilla/native-messaging-hosts/org.kde.plasma.browser_integration.json";
 
   imports = [
     #./xserver.nix
