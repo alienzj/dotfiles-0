@@ -128,7 +128,7 @@
           system = "x86_64-linux";
           modules = [
             dedsec-grub-theme.nixosModule
-            ./nixos/configuration.nix
+            ./hosts/yoga/configuration.nix
             color-scheme
           ];
         };
