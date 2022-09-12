@@ -1,9 +1,9 @@
 {
   imports = [
     ./xserver.nix
-    ./wayland.nix
+    #./wayland.nix
 
-    ./gnome
+    #./gnome
 
     #./xmonad
     #./picom
