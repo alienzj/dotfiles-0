@@ -52,6 +52,23 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_HK.utf8";
 
+  # inputmethod
+  i18n.inputMethod = {
+    enabled = "fcitx5";
+    fcitx.engines = with pkgs; [ rime ];
+    fcitx5.enableRimeData = true;
+    fcitx5.addons = with pkgs; [
+      fcitx5-rime
+      fcitx5-mozc
+      fcitx5-chinese-addons
+      fcitx5-gtk
+    ];
+  };
+
+  #i18n.inputMethod.enabled = "ibus";
+  #i18n.inputMethod.ibus.engines = with pkgs.ibus-engines; [ libpinyin ];
+
+
   # Enable the X11 windowing system.
   # services.xserver.enable = true; 
   # see modules/desktop/X11.nix
@@ -145,15 +162,5 @@
     experimental-features = [ "nix-command" "flakes" ];
     extra-sandbox-paths = ["/bin/sh=${pkgs.bash}/bin/sh"];
   };
-
-  i18n.inputMethod.fcitx5 = {
-    #enabled = true;
-    addons = with pkgs; [
-      fcitx5-rime
-    ];
-  };
-
-  #i18n.inputMethod.enabled = "ibus";
-  #i18n.inputMethod.ibus.engines = with pkgs.ibus-engines; [ libpinyin ];
 
 }
