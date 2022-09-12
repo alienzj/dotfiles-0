@@ -35,4 +35,5 @@
     };
   };
 
+  spotify.override { deviceScaleFactor = 1.66; };
 }

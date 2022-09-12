@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ pkgs, config, lib, ... }:
 
 {
   #services.openssh = {
@@ -42,6 +42,9 @@
     serverAliveInterval = 300;
   };
 
+  home.packages = with pkgs; [
+    autossh
+  ];
 
   services.autossh.sessions = [
     {
