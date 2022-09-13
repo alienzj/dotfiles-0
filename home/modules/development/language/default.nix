@@ -27,14 +27,6 @@
     (python3.withPackages (ps: with ps; [ setuptools pip debugpy ]))
     autoflake
     python3Packages.ipython
-    python3Packages.pandas
-    python3Packages.numpy
-    python3Packages.matplotlib
-    python3Packages.seaborn
-    python3Packages.scipy
-    python3Packages.scikit-learn
-    python3Packages.scikit-bio
-    python3Packages.scikitimage
     python3Packages.parso
     python3Packages.twine
     nodePackages.pyright
@@ -47,10 +39,6 @@
 
     # R
     R 
-    rPackages.quarto
-    rPackages.tidyverse
-    rPackages.tidymodels
-    rPackages.vegan
     
     # Rust
     cargo
