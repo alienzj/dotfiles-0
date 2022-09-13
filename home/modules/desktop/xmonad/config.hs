@@ -213,7 +213,9 @@ myLayouts = ifWider minHorizontalWidth horizontalMonitorLayouts verticalMonitorL
     verticalMonitorLayouts = Mirror tall ||| Accordion ||| invertedGrid
     -- we are using the `ifWider` layoutModifier to have two different sets of
     -- layout modifiers for monitors in horizontal or vertical configuration
-    minHorizontalWidth = 2560
+ 
+    -- minHorizontalWidth = 2560
+    minHorizontalWidth = 2880
 
     tall = Tall {tallNMaster = 1, tallRatioIncrement = 3 / 100, tallRatio = 3 / 5}
     twoPane = TwoPanePersistent {slaveWin = Nothing, dFrac = 3 / 100, mFrac = 3 / 5}
