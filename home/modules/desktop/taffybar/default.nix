@@ -9,7 +9,6 @@ let
     deadd-notification-center &
     nm-applet &
     nm-tray &
-    solaar -w hide &
     blueman-applet &
     pasystray &
     status-notifier-watcher &
@@ -17,6 +16,8 @@ let
     custom-taffybar &
     eww open topbar-btw
   '';
+  # solaar -w hide &
+
   custom-taffybar =
     (import ../../../../programs/taffybar/default.nix) { inherit pkgs; };
 in
