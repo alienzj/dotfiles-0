@@ -118,7 +118,7 @@
           ./home/modules/multimedia
           ./home/modules/browser
           ./home/modules/editor
-          ./home/modules/programming
+          ./home/modules/development
         ];
       };
 
