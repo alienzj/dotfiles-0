@@ -73,18 +73,18 @@
 ;; system
 (defwidget system [] 
 	(box :class "genwin" :vexpand "false" :hexpand "false" 
-		(box :orientation "v" :spacing 35 :halign "center" :valign "center" :space-evenly "false" :vexpand "false" :hexpand "false" 
+		(box :orientation "v" :spacing 25 :halign "center" :valign "center" :space-evenly "false" :vexpand "false" :hexpand "false" 
 			(box :class "cpu_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
-				(label :class "iconcpu" :text "")
+				(label :class "iconcpu" :text "C")
 				(scale :min 0 :max 100 :value CPU_USAGE :active "false"))
 			(box :class "mem_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
-				(label :class "iconmem" :text "")
+				(label :class "iconmem" :text "M")
 				(scale :min 0 :max 100 :value MEM_USAGE :active "false"))
 			(box :class "bright_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
-				(label :class "iconbright" :text "")
+				(label :class "iconbright" :text "B")
 				(scale :min 0 :max 100 :value BLIGHT :active "false"))
 			(box :class "bat_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
-				(label :class "iconbat" :text "")
+				(label :class "iconbat" :text "P")
 				(scale :min 0 :max 100 :value BATTERY :active "false")))))
 
 
