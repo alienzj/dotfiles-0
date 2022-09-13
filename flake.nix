@@ -122,7 +122,7 @@
           ./home/modules/browser
           ./home/modules/editor
           ./home/modules/development
-          ./home/modules/game
+          #./home/modules/game
         ];
       };
 
