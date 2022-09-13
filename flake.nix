@@ -75,6 +75,7 @@
           "slack"
           "openpassword-password-manager"
           "okta-browser-plugin"
+          "vscode"
         ];  
 
         #nixpkgs.overlays =

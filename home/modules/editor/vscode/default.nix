@@ -3,7 +3,7 @@
 {
   programs.vscode = {
     enable = true;
-    package = pkgs.vscodium;
+    #package = pkgs.vscodium;
     extensions = with pkgs.vscode-extensions; [
       # nix
       bbenoist.nix
@@ -24,8 +24,9 @@
       vscodevim.vim
 
       # remote
+      # In particular, remote-ssh does not work yet with VSCodium.
       ms-vscode-remote.remote-ssh
-      thingalon.pony-ssh
+      #thingalon.pony-ssh
 
       # markdown
       yzhang.markdown-all-in-one
