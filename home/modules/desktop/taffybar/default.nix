@@ -17,6 +17,20 @@ let
     eww open topbar-btw
   '';
   # solaar -w hide &
+  # killall custom-taffybar
+  # kill $(pidof pasystray)
+  # killall nm-applet
+  # eww daemon &
+  # deadd-notification-center &
+  # nm-applet &
+  # nm-tray &
+  # blueman-applet &
+  # pasystray &
+  # status-notifier-watcher &
+  # eww close topbar-btw &
+  # custom-taffybar &
+  # eww open topbar-btw
+ 
 
   custom-taffybar =
     (import ../../../../programs/taffybar/default.nix) { inherit pkgs; };
