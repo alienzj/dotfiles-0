@@ -95,6 +95,12 @@ entry {
   border-radius: 10px;
 }
 
+#element-icon {
+    size: 1.2em;
+    border: 0px;
+    background-color: @background;
+}
+
 #element-text {
   background-color: @background;
   text-color: @foreground;
