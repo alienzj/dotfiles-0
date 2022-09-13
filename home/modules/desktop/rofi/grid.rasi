@@ -18,7 +18,7 @@ configuration {
 @import "colors.rasi"
 
 * {
-  text-font: "Hack Nerd Font 12";
+  text-font: "Hack Nerd Font 20";
 
   inputbar-margin: 3px 3px;
   prompt-padding: 15px 20px;
