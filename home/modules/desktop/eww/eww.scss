@@ -48,7 +48,7 @@ $foreground: #E5E9F0;
 
 /** Profile ******************************************/
 .face {
-	background-image: url('images/fox.png');
+	background-image: url('images/bg.png');
 	background-size: 175px;
 	background-position: 50% 35%;
 	min-height: 175px;
@@ -168,7 +168,7 @@ $foreground: #E5E9F0;
 }
 
 .btn_prev, .btn_play, .btn_next {
-	font-family: Iosevka Nerd Font;
+	font-family: Hack;
 }
 .btn_prev {
 	color: $yellow;
@@ -202,7 +202,7 @@ $foreground: #E5E9F0;
 
 /** Weather ***************************************/
 .iconweather {
-	font-family: Iosevka Nerd Font;
+	font-family: Hack;
 	font-size : 58px;
 	font-weight : normal;
 	margin : 10px 0px 0px 30px;
@@ -244,7 +244,7 @@ $foreground: #E5E9F0;
 /** Links ***************************************/
 .iconweb, .iconmail, .iconreads {
 	color: #FFFFFF;
-	font-family: Iosevka Nerd Font;
+	font-family: Hack;
 	font-size : 60px;
 	font-weight : normal;
 }
@@ -312,7 +312,7 @@ $foreground: #E5E9F0;
 }
 .hddicon {
 	color: $accent;
-	font-family: Iosevka Nerd Font;
+	font-family: Hack;
 	font-size : 70px;
 	font-weight : normal;
 	margin : 5px 10px 5px 25px;
@@ -330,7 +330,7 @@ $foreground: #E5E9F0;
 }
 
 .iconfolder1, .iconfolder2, .iconfolder3, .iconfolder4, .iconfolder5, .iconfolder6  {
-	font-family: Iosevka Nerd Font;
+	font-family: Hack;
 	font-size : 24px;
 	font-weight : normal;
 	margin : 0px 0px 0px 35px;
