@@ -1,258 +1,251 @@
 /** Global *******************************************/
-
-$accent: #7aa2f7;
-$red: #f7768e;
-$green: #9ece6a;
-$yellow: #e0af68;
-$blue: #7aa2f7;
-$magenta: #bb9af7;
-$cyan: #7dcfff;
-$white: #a9b1d6;
-$background: #24283b;
-$background-bright: #3A404C;
-$foreground: #E5E9F0;
-
-
 *{
 	all: unset;
 	font-family: feather;
-	font-family: Hack;
+	font-family: Iosevka;
 }
 
 /** Background ***************************************/
 .bg {
-	background-color: $accent;
-	opacity: 0.2;
+	background-image: url("images/bg.png");
+	background-color: #474D59;
+	opacity: 1;
 }
 
 /** Generic window ***********************************/
 .genwin {
-	background-color: $background;
+	background-color: #2E3440;
 	border-radius: 16px;
-}
-
-/** BTW window ***********************************/
-.btw-icon {
-	background-size: 20px;
-	background-color: $background;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    border-style: solid;
-    border-radius: 20px;
-    border-width: 1px;
-    border-color: $accent;
-
-	margin : 2px;
 }
 
 /** Profile ******************************************/
 .face {
-	background-image: url('images/bg.png');
-	background-size: 175px;
-	background-position: 50% 35%;
-	min-height: 175px;
-	min-width: 175px;
-	margin: 40px 0px 0px 2px;
+	background-size: 200px;
+	min-height: 200px;
+	min-width: 200px;
+	margin: 65px 0px 0px 0px;
 	border-radius: 100%;
 }
 
 .fullname {
-	color: $accent;
+	color: #D46389;
 	font-size : 30px;
 	font-weight : bold;
 }
 
 .username {
-	color: $magenta;
+	color: #8FBCBB;
 	font-size : 22px;
 	font-weight : bold;
 	margin : -15px 0px 0px 0px;
 }
 
 /** System ********************************************/
-.iconcpu, .iconmem, .iconbright {
-	font-size : 22px;
+.iconcpu, .iconmem, .iconbright, .iconbat {
+	font-size : 32px;
 	font-weight : normal;
 }
 .iconcpu {
-	color: $red;
+	color: #BF616A;
 }
 .iconmem {
-	color: $green;
+	color: #A3BE8C;
+}
+.iconbright {
+	color: #EBCB8B;
+}
+.iconbat {
+	color: #88C0D0;
 }
 
-.cpu_bar, .mem_bar, .bright_bar, scale trough {
+.cpu_bar, .mem_bar, .bright_bar, .bat_bar, scale trough {
 	all: unset;
-	background-color: $background-bright;
+	background-color: #3A404C;
 	border-radius: 16px;
-	min-height: 12px;
-	min-width: 170px;
+	min-height: 28px;
+	min-width: 240px;
 }
 
-.cpu_bar, .mem_bar, .bright_bar, scale trough highlight {
+.cpu_bar, .mem_bar, .bright_bar, .bat_bar, scale trough highlight {
 	all: unset;
 	border-radius: 16px;
 }
 
 .cpu_bar scale trough highlight {
-	background-color: $red;
+	background-color: #BF616A;
 }
 .mem_bar scale trough highlight {
-	background-color: $green;
+	background-color: #A3BE8C;
+}
+.bright_bar scale trough highlight {
+	background-color: #EBCB8B;
+}
+.bat_bar scale trough highlight {
+	background-color: #88C0D0;
 }
 
 /** Clock ********************************************/
-.clock_time {
-	color: $accent;
-	font-size : 45px;
+.time_hour, .time_min {
+	color: #81A1C1;
+	font-size : 70px;
 	font-weight : bold;
 }
+.time_hour {
+	margin : 15px 0px 0px 20px;
+}
+.time_min {
+	margin : 0px 0px 10px 0px;
+}
 
-.clock_day {
-	color: $yellow;
-	font-size : 17px;
+.time_mer {
+	color: #A3BE8C;
+	font-size : 40px;
+	font-weight : bold;
+	margin : 20px 0px 0px 0px;
+}
+
+.time_day {
+	color: #EBCB8B;
+	font-size : 30px;
 	font-weight : normal;
+	margin : 0px 0px 20px -20px;
 }
 
 /** Uptime ********************************************/
 .icontimer {
-	color: $magenta;
-	font-size : 50px;
+	color: #B48EAD;
+	font-size : 90px;
 	font-weight : normal;
 }
 
 .uphour {
-	color: $foreground;
-	font-size : 28px;
+	color: #E5E9F0;
+	font-size : 42px;
 	font-weight : bold;
 }
 
 .upmin {
-	color: $foreground;
-	font-size : 22px;
+	color: #E5E9F0;
+	font-size : 32px;
 	font-weight : bold;
 }
 
 /** Music ***************************************/
 .album_art {
-	background-size: cover;	
-	background-position: center;
-	min-height: 200px;
-	min-width: 200px;
-	margin: 20px;
-	border-radius: 14px;
-}
-
-.album_art-large {
-	background-size: cover;	
-	background-position: center;
-	min-height: 300px;
-	min-width: 300px;
+	background-size: 240px;
+	min-height: 240px;
+	min-width: 240px;
 	margin: 20px;
 	border-radius: 14px;
 }
 
 .song {
 	color: #8FBCBB;
-	font-size : 18px;
+	font-size : 24px;
 	font-weight : bold;
-	margin : 15px 0px 0px 0px;
+	margin : 40px 0px 0px 0px;
 }
 
 .artist {
-	color: $yellow;
-	font-size : 14px;
+	color: #EBCB8B;
+	font-size : 16px;
 	font-weight : normal;
-	margin : 0px 0px 0px 0px;
+	margin : 0px 0px 15px 0px;
 }
 
 .btn_prev, .btn_play, .btn_next {
-	font-family: Hack;
+	font-family: Iosevka Nerd Font;
 }
 .btn_prev {
-	color: $yellow;
+	color: #EBCB8B;
 	font-size : 32px;
 	font-weight : normal;
 }
 .btn_play {
-	color: $green;
-	font-size : 40px;
+	color: #A3BE8C;
+	font-size : 48px;
 	font-weight : bold;
 }
 .btn_next {
-	color: $yellow;
+	color: #EBCB8B;
 	font-size : 32px;
 	font-weight : normal;
 }
 
 .music_bar scale trough highlight {
 	all: unset;
-	background-color: $magenta;
+	background-color: #B48EAD;
 	border-radius: 8px;
 }
 .music_bar scale trough {
 	all: unset;
-	background-color: $background-bright;
+	background-color: #3A404C;
 	border-radius: 8px;
-	min-height: 10px;
-	min-width: 180px;
-	margin : 0px 10px 0px 0px;
+	min-height: 20px;
+	min-width: 310px;
+	margin : 10px 0px 0px 0px;
 }
 
 /** Weather ***************************************/
 .iconweather {
-	font-family: Hack;
-	font-size : 58px;
+	font-family: Iosevka Nerd Font;
+	font-size : 120px;
 	font-weight : normal;
-	margin : 10px 0px 0px 30px;
+	margin : 15px 0px 0px 30px;
 }
 
 .label_temp {
 	color : #A6D1DD;
-	font-size : 54px;
+	font-size : 80px;
 	font-weight : bold;
-	margin : 15px 25px 0px 0px;
+	margin : -15px 30px 0px 0px;
 }
 
 .label_stat {
-	color : $red;
-	font-size : 30px;
+	color : #BF616A;
+	font-size : 38px;
 	font-weight : bold;
-	margin: 0px 0px 10px 0px;
 }
 
 .label_quote {
-	color : $foreground;
+	color : #E5E5E5;
 	font-size : 18px;
 	font-weight : normal;
 }
 
 /** Applications ***************************************/
 .appbox {
-	margin : 10px 0px 0px 12px;
+	margin : 15px 0px 0px 25px;
 }
 
-.app {
+.app_fox, .app_telegram, .app_discord, .app_terminal,
+.app_files, .app_geany, .app_code, .app_gimp, .app_vbox {
     background-repeat: no-repeat;
-	background-size: 54px;
-	min-height: 54px;
-	min-width: 54px;
-	margin: 5px 7px 0px 7px;
+	background-size: 64px;
+	min-height: 64px;
+	min-width: 64px;
+	margin: 8px 8px 0px 8px;
 }
+
+.app_fox {}
+.app_telegram {}
+.app_discord {}
+.app_terminal {}
+.app_files {}
+.app_geany {}
+.app_code {}
+.app_gimp {}
+.app_vbox {}
 
 /** Links ***************************************/
-.iconweb, .iconmail, .iconreads {
+.iconweb, .iconmail {
 	color: #FFFFFF;
-	font-family: Hack;
-	font-size : 60px;
+	font-family: Iosevka Nerd Font;
+	font-size : 70px;
 	font-weight : normal;
 }
 .iconmail {
 	color: #DF584E;
-}
-.iconreads {
-	color: #372213;
 }
 
 .github {
@@ -271,17 +264,21 @@ $foreground: #E5E9F0;
 	background-color: #DF584E;
 	border-radius: 16px;
 }
-.nixos {
-	background-color: #4c6eb1;
-	border-radius: 16px;
-}
 .mail {
 	background-color: #FFFFFF;
 	border-radius: 16px;
 }
-.goodreads {
-	background-color: #F4F1EA;
-	border-radius: 16px;
+
+.mailbox {
+	background-color: #E5E5E5;
+	border-radius: 10px;
+	margin: 48px 0px 48px 0px;
+}
+.label_mails {
+	color: #404040;
+	font-size : 32px;
+	font-weight : bold;
+	margin: 0px 12px 0px 12px;
 }
 
 /** Power buttons ***************************************/
@@ -291,67 +288,66 @@ $foreground: #E5E9F0;
 }
 
 .btn_logout {
-	color: $green;
+	color: #BF616A;
 }
 .btn_sleep {
-	color: $yellow;
+	color: #A3BE8C;
 }
 .btn_reboot {
-	color: $cyan;
+	color: #EBCB8B;
 }
 .btn_poweroff {
-	color: $red;
+	color: #88C0D0;
 }
 
 /** Home folders ***************************************/
 .hddbox {
-	background-color: #414868;
+	background-color: #3A404C;
 	border-radius: 10px;
 	margin : 15px;
-    padding: 20px;
 }
 .hddicon {
-	color: $accent;
-	font-family: Hack;
+	color: #81A1C1;
+	font-family: Iosevka Nerd Font;
 	font-size : 70px;
 	font-weight : normal;
-	margin : 5px 10px 5px 25px;
+	margin : 25px 20px 25px 40px;
 }
 .hdd_label {
-	color: $foreground;
-	font-size : 32px;
+	color: #E5E9F0;
+	font-size : 48px;
 	font-weight : bold;
-	margin : 0px 0px 0px 10px;
+	margin : 0px 0px 0px 15px;
 }
 .fs_sep {
 	color: #2E3440;
-	font-size : 34px;
+	font-size : 36px;
 	font-weight : bold;
 }
 
 .iconfolder1, .iconfolder2, .iconfolder3, .iconfolder4, .iconfolder5, .iconfolder6  {
-	font-family: Hack;
-	font-size : 24px;
+	font-family: Iosevka Nerd Font;
+	font-size : 32px;
 	font-weight : normal;
-	margin : 0px 0px 0px 35px;
+	margin : 0px 0px 0px 75px;
 }
 .iconfolder1 {
-	color: $red;
+	color: #BF616A;
 }
 .iconfolder2 {
-	color: $green;
+	color: #A3BE8C;
 }
 .iconfolder3 {
-	color: $yellow;
+	color: #EBCB8B;
 }
 .iconfolder4 {
-	color: $accent;
+	color: #81A1C1;
 }
 .iconfolder5 {
-	color: $magenta;
+	color: #B48EAD;
 }
 .iconfolder6 {
-	color: $cyan;
+	color: #88C0D0;
 }
 
 .label_folder1, .label_folder2, .label_folder3, .label_folder4, .label_folder5, .label_folder6  {
@@ -360,22 +356,22 @@ $foreground: #E5E9F0;
 	margin : 0px 0px 0px 30px;
 }
 .label_folder1 {
-	color: $red;
+	color: #BF616A;
 }
 .label_folder2 {
-	color: $green;
+	color: #A3BE8C;
 }
 .label_folder3 {
-	color: $yellow;
+	color: #EBCB8B;
 }
 .label_folder4 {
-	color: $accent;
+	color: #81A1C1;
 }
 .label_folder5 {
-	color: $magenta;
+	color: #B48EAD;
 }
 .label_folder6 {
-	color: $cyan;
+	color: #88C0D0;
 }
 
 /** EOF *************************************************/

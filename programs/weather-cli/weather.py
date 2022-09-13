@@ -9,7 +9,8 @@ from typing import Dict, Optional
 
 import requests
 
-APP_ID = environ["OPEN_WEATHER_API_KEY"]
+#APP_ID = environ["OPEN_WEATHER_API_KEY"]
+APP_ID = "e0fa5e345247d966f625468b5353020f"
 TEMP_STORE_LOCATION = "/tmp/weather.json"
 TEMP_STALE_THRESHOLD = timedelta(hours=2)
 
