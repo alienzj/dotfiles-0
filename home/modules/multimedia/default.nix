@@ -7,9 +7,9 @@
     gimp-with-plugins
     inkscape-with-extensions
     blender
-    #spotify
+    spotify
     #(wrapbin spotify "/bin/spotify" "--force-device-scale-factor 42")
-    (spotify.override { deviceScaleFactor = 1.66; })
+    #(spotify.override { deviceScaleFactor = 1.66; })
     netease-cloud-music-gtk
   ];
 
