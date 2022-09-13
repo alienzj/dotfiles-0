@@ -61,7 +61,19 @@
         publisher = "ms-vscode-remote";
         version = "0.47.2";
         sha256 = "1hp6gjh4xp2m1xlm1jsdzxw9d8frkiidhph6nvl24d0h8z34w49g";
-      }
+      };
+      {
+        name = "snakemake-lang";
+        publisher = "snakemake";
+        version = "0.1.8";
+        sha256 = "6496bf416792dc4ed7385004ec57d5ca41cc6b1ead31b1b21194cf270c177b5b";
+      }; 
+      {
+        name = "snakefmt";
+        publisher = "tfehlmann";
+        version = "0.1.0";
+        sha256 = "8d006505847cd29bbd6c95d235d4d38e465df7bed49c41cf0372419fdcbb33dd";
+      }; 
     ];
 
     userSettings = {
