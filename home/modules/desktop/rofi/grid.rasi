@@ -9,7 +9,7 @@ configuration {
   display-combi: "";
 
   show-icons: true;
-  icon-theme: "Arc";
+  icon-theme: "Papirus";
   hide-scrollbar: true;
   fullscreen: false;
   terminal: "alacritty";

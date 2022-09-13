@@ -87,7 +87,7 @@ element-text {
 }
 
 #element-icon {
-    size: 64px;
+    size: 1.2em;
     border: 0px;
     background-color: @background;
 }

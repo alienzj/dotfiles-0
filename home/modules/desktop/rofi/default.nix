@@ -18,3 +18,6 @@
   home.file.".config/rofi/grid.rasi".source = ./grid.rasi;
   home.file.".config/rofi/launcher.rasi".source = ./launcher.rasi;
 }
+
+# fix icon size
+# https://github.com/davatorium/rofi/issues/1185
