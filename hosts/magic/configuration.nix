@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ./modules/desktop
       ./modules/office
+      ./modules/game
     ];
 
   # Setup keyfile
