@@ -76,6 +76,9 @@
           "openpassword-password-manager"
           "okta-browser-plugin"
           "vscode"
+          "steam"
+          "steam-original"
+          "steam-runtime"
         ];  
 
         #nixpkgs.overlays =
@@ -119,6 +122,7 @@
           ./home/modules/browser
           ./home/modules/editor
           ./home/modules/development
+          ./home/modules/game
         ];
       };
 
