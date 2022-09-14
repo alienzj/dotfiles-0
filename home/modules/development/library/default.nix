@@ -1,4 +1,18 @@
 { config, pkgs, ... }:
+
+with pkgs;
+let
+  R-with-packages = rWrapper.override {
+    packages = with rPackages; [
+      tidyverse
+      tidymodels
+      vegan
+      quarto
+      shiny
+    ];
+  };
+in
+
 {
   home.packages = with pkgs; [
     # C/C++
@@ -19,10 +33,7 @@
 
 
     # R
-    rPackages.quarto
-    rPackages.tidyverse
-    rPackages.tidymodels
-    rPackages.vegan
+    R-with-packages
   ];
 
 }
