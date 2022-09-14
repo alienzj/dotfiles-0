@@ -9,6 +9,8 @@ let
       vegan
       quarto
       shiny
+      leaflet
+      robservable
     ];
   };
 
@@ -19,6 +21,8 @@ let
       vegan
       quarto
       shiny
+      leaflet
+      robservable
     ];
   };
 
