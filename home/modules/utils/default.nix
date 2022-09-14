@@ -8,20 +8,22 @@ let
   };
 in
 {
+  imports = [
+    ./basedev.nix
+  ];
+
   home.packages = with pkgs; [
     moreutils
     ripgrep
     fd
     tree
     diskus
-
     arandr
     bashmount
     dig
     docker-compose
     dua
     fx
-    gnumake
     graphviz
     hexyl
     ngrok
@@ -36,14 +38,12 @@ in
     bottom
     neofetch
     nix
-
     consul
     nomad
     packer
     terraform
     vagrant
     vault
-
   ];
 
   programs.tealdeer = {
