@@ -1,7 +1,26 @@
 # reference: https://nixos.wiki/wiki/Fonts
+# https://github.com/nix-community/home-manager/issues/393
 
-{ pkgs, colorscheme, ... }:
+# method 0
+#{ config, pkgs, lib, colorscheme, ... }:
 
+# method 2
+#let
+#  sysconfig = (import <nixpkgs/nixos> {}).config;
+#in
+
+# method 3
+#{ sysconfig ? (import <nixpkgs/nixos> {}).config, config, pkgs, lib, colorscheme, ... }:
+
+# method 4
+# systemConfig:
+#{ pkgs ? import <nixpkgs> {}, lib, colorscheme, ... }:
+
+
+{ config, pkgs, lib, colorscheme, ... }:
+let
+  hosts  = import ../../../hosts/hosts.nix;
+in
 {
 
   home.packages = with pkgs; [
@@ -32,7 +51,7 @@
   #};
 
   xresources = {
-    properties = {
+    properties = ({
       "*.foreground" = colorscheme.fg-primary;
       "*.background" = colorscheme.bg-primary;
 
@@ -57,13 +76,18 @@
       "XTerm*font" = "xft:Hack Nerd Font Mono:pixelsize=12";
       "*.internalBorder" = 4;
 
-      "Xft.dpi" = 168;
       "Xft.antialias" = true;
       "Xft.hinting" = true;
       "Xft.rgba" = "rgb";
       "Xft.autohint" = false;
       "Xft.hintstyle" = "hintslight";
       "Xft.lcdfilter" = "lcddefault";
-    };
+    } //
+    (lib.mkIf (hosts.hostName == "yoga") {
+      "Xft.dpi" = 168;
+    }) //
+    (lib.mkIf (hosts.hostName == "magic") {
+      "Xft.dpi" = 91;
+    }));
   };
 }
