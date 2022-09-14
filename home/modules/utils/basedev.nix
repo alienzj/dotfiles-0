@@ -13,15 +13,15 @@
     flex
     gawk
     gettext
-    grep
+    #grep
     groff
     gzip
     libtool
     m4
-    make
+    #make
     patch
     pkgconf
-    sed
+    #sed
     sudo
     texinfo
     which
