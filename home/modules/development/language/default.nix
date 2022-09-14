@@ -24,21 +24,15 @@
     lua
 
     # Python
-    (python3.withPackages (ps: with ps; [ setuptools pip debugpy ]))
-    autoflake
-    python3Packages.ipython
-    python3Packages.parso
-    python3Packages.twine
-    nodePackages.pyright
-
-    # Jupyter
-    jupyter
+    #(python3.withPackages (ps: with ps; [ setuptools pip debugpy ]))
+    #autoflake
+    #nodePackages.pyright
 
     # Perl
     perl
 
     # R
-    R 
+    #R 
     
     # Rust
     cargo

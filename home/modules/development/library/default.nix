@@ -2,7 +2,7 @@
 
 with pkgs;
 let
-  R-with-packages = rWrapper.override {
+  zj-R-with-packages = rWrapper.override {
     packages = with rPackages; [
       tidyverse
       tidymodels
@@ -11,7 +11,53 @@ let
       shiny
     ];
   };
+
+  zj-RStudio-with-packages = rstudioWrapper.override{
+    packages = with rPackages; [
+      tidyverse
+      tidymodels
+      vegan
+      quarto
+      shiny
+    ];
+  };
+
+  zj-python-packages = python-packages: with python-packages; [
+    ipython
+    requests
+    pandas
+    numpy
+    matplotlib
+    seaborn
+    scipy
+    parso
+    twine
+
+    # other python packages you want
+  ]; 
+  zj-python-with-packages = python3.withPackages zj-python-packages;
+
+  my-python = python3;
+  python-with-my-packages = my-python.withPackages (p: with p; [
+    pandas
+    requests
+    # other python packages you want
+  ]);
+
 in
+
+/*
+pkgs.mkShell {
+  buildInputs = [
+    python-with-my-packages
+    # other dependencies
+  ];
+  shellHook = ''
+    PYTHONPATH=${python-with-my-packages}/${python-with-my-packages.sitePackages}
+    # maybe set more env-vars
+  '';
+}
+*/
 
 {
   home.packages = with pkgs; [
@@ -21,19 +67,12 @@ in
     # Haskell
     haskellPackages.zlib
 
-    # Python
-    python3Packages.pandas
-    python3Packages.numpy
-    python3Packages.matplotlib
-    python3Packages.seaborn
-    python3Packages.scipy
-    python3Packages.scikit-learn
-    python3Packages.scikit-bio
-    python3Packages.scikitimage
-
-
     # R
-    R-with-packages
+    zj-R-with-packages
+    zj-RStudio-with-packages
+
+    # python
+    zj-python-with-packages
   ];
 
 }
