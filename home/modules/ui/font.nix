@@ -82,8 +82,9 @@ in
       "Xft.autohint" = false;
       "Xft.hintstyle" = "hintslight";
       "Xft.lcdfilter" = "lcddefault";
-      "Xft.dpi" = 168;
-      "Xft.dpi" = 91;
+      #"Xft.dpi" = 168;
+      #"Xft.dpi" = 91;
+      "Xft.dpi" = 96;
     };
   };
 }
