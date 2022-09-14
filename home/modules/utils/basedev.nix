@@ -22,7 +22,7 @@
     patch
     pkgconf
     #sed
-    sudo
+    #sudo
     texinfo
     which
   ];
