@@ -83,10 +83,10 @@ in
       "Xft.hintstyle" = "hintslight";
       "Xft.lcdfilter" = "lcddefault";
     } //
-    (lib.mkIf (hosts.hostName == "yoga") {
+    (lib.mkIf (hosts.hostname == "yoga") {
       "Xft.dpi" = 168;
     }) //
-    (lib.mkIf (hosts.hostName == "magic") {
+    (lib.mkIf (hosts.hostname == "magic") {
       "Xft.dpi" = 91;
     }));
   };
