@@ -4,6 +4,6 @@
   imports = [
     ./language
     ./library
-    ./kernel
+    #./kernel
   ];
 }
