@@ -30,10 +30,17 @@
       url = "github:sherubthakur/taffybar";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    #firefox-nightly = {
+    #  url = "github:colemickens/flake-firefox-nightly";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
   };
+
 
   outputs = { 
     self,
+    #firefox-nightly,
     nur,
     taffybar,
     nixpkgs,
@@ -81,19 +88,10 @@
           "steam-runtime"
         ];  
 
-        #nixpkgs.overlays =
-        #  let
-        #  # Change this to a rev sha to pin
-        #  moz-rev = "master";
-        #  moz-url = builtins.fetchTarball { url = "https://github.com/mozilla/nixpkgs-mozilla/archive/${moz-rev}.tar.gz";};
-        #  nightlyOverlay = (import "${moz-url}/firefox-overlay.nix");
-        #  in [
-        #    nightlyOverlay
-        #    nur.overlay
-        #  ];
         nixpkgs.overlays = [
           nur.overlay
           taffybar.overlay
+          #firefox-nightly.overlay
         ];
 
         programs.home-manager.enable = true;
