@@ -40,6 +40,13 @@
   networking.hostName = "yoga"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
+  # Enable networking
+  networking.networkmanager.enable = true;
+
+  networking.useDHCP = false;
+  networking.interfaces.wlp1s0.useDHCP = true;
+
+
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -115,8 +122,11 @@
     description = "Jie Zhu";
     #shell = pkgs.fish;
     shell = pkgs.zsh;
-    extraGroups = [ "networkmanager" "wheel" "audio" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "docker" "qemu-libvirtd" "libvirtd" ];
   };
+  users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
+
+
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -162,6 +172,24 @@
   nix.settings = {
     experimental-features = [ "nix-command" "flakes" ];
     extra-sandbox-paths = ["/bin/sh=${pkgs.bash}/bin/sh"];
+  };
+
+  # https://discourse.nixos.org/t/stop-pc-from-sleep/5757
+  powerManagement.enable = true;
+
+  #systemd.targets.sleep.enable = false;
+  #systemd.targets.suspend.enable = false;
+  #systemd.targets.hibernate.enable = false;
+  #systemd.targets.hybrid-sleep.enable = false;
+
+  virtualisation = {
+    virtualbox.host.enable = true;
+    virtualbox.host.enableExtensionPack = true;
+    virtualbox.guest.enable = true;
+    virtualbox.guest.x11  = true;
+    libvirtd.enable = true;
+    docker.enable = true;
+    docker.enableOnBoot = true;
   };
 
 }
