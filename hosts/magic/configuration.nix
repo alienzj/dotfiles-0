@@ -59,6 +59,9 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  networking.useDHCP = false;
+  networking.interfaces.eno1.useDHCP = true;
+
   # Set your time zone.
   time.timeZone = "Asia/Hong_Kong";
 
@@ -127,8 +130,9 @@
     description = "Jie Zhu";
     #shell = pkgs.fish;
     shell = pkgs.zsh;
-    extraGroups = [ "networkmanager" "wheel" "audio" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "docker" "qemu-libvirtd" "libvirtd" ];
   };
+  users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -183,5 +187,15 @@
   systemd.targets.suspend.enable = false;
   systemd.targets.hibernate.enable = false;
   systemd.targets.hybrid-sleep.enable = false;
+
+  virtualisation = {
+    virtualbox.host.enable = true;
+    virtualbox.host.enableExtensionPack = true;
+    virtualbox.guest.enable = true;
+    virtualbox.guest.x11  = true;
+    libvirtd.enable = true;
+    docker.enable = true;
+    docker.enableOnBoot = true;
+  };
 
 }
