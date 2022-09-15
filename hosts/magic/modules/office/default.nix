@@ -101,7 +101,6 @@ in {
   };
 
 
-
   services.gvfs.enable = true;
 
 
