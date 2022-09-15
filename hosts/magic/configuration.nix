@@ -14,6 +14,12 @@
     ];
 
   # Setup keyfile
+  boot.initrd.secrets = {
+    "/crypto_keyfile.bin" = null;
+  };
+
+  boot.supportedFilesystems = [ "ntfs" ];
+
   # Bootloader.
   boot.loader = {
     efi.canTouchEfiVariables = true;
@@ -34,10 +40,6 @@
         resolution = "1080p";
       };
     };
-  };
-
-  boot.initrd.secrets = {
-    "/crypto_keyfile.bin" = null;
   };
 
   # boot.kernelModules = [ "i2c-dev" "i2c-piix4" "kvm-amd" ];
