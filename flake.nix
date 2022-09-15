@@ -31,16 +31,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    #firefox-nightly = {
-    #  url = "github:colemickens/flake-firefox-nightly";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
+    firefox-nightly = {
+      url = "github:colemickens/flake-firefox-nightly";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
-
 
   outputs = { 
     self,
-    #firefox-nightly,
+    firefox-nightly,
     nur,
     taffybar,
     nixpkgs,
@@ -54,6 +53,10 @@
       #  system.nixos.revision = mkForce null;
       #  system.nixos.versionSuffix = mkForce "pre-git";
       #});
+
+      #moz-url = builtins.fetchTarball {
+      #  url = "https://github.com/mozilla/nixpkgs-mozilla/archive/master.tar.gz";
+      #};
 
       color-scheme = { lib, ... }:
       {
@@ -92,6 +95,7 @@
           nur.overlay
           taffybar.overlay
           #firefox-nightly.overlay
+          #(import "${moz-url}/firefox-overlay.nix")
         ];
 
         programs.home-manager.enable = true;

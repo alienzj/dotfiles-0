@@ -47,7 +47,7 @@ in
   
   # firefox nightly
   #home.packages = with pkgs; [
-  #  latest.firefox-nightly-bin
+    #latest.firefox-nightly-bin
   #  firefox-nightly-bin
   #];
 
