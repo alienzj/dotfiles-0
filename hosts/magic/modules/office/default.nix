@@ -103,13 +103,13 @@ in {
 
   services.gvfs.enable = true;
 
-
   # printing
   services.printing.enable = true;
   #services.printing.drivers = [];
   services.avahi.enable = true;
   services.avahi.nssmdns = true;
 
+  programs.system-config-printer.enable = true;
 
 }
 

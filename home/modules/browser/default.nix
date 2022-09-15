@@ -48,16 +48,22 @@ in
   # firefox nightly
   #home.packages = with pkgs; [
   #  latest.firefox-nightly-bin
+  #  firefox-nightly-bin
   #];
+
+  programs.chromium = {
+    enable = true;
+  };
 
   programs.browserpass = {
     enable = true;
-    browsers = [ "firefox" ];
+    browsers = [
+      "firefox"
+      "chromium"
+    ];
   };
 
-  #home.packages = with pkgs; [
-  #  firefox-nightly-bin
-  #];
+
 
 }
 
