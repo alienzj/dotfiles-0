@@ -37,6 +37,14 @@
     enable = true;
     font = { name = "TeX Gyre Heros 10"; };
     iconTheme = { name = colorscheme.gtk-icon-name; };
-    theme = { name = colorscheme.gtk-name; };
+    #theme = { name = colorscheme.gtk-name; };
+    
+    gtk3 = {
+      extraCss = builtins.readFile ./Mono-gtk-theme/MonoTheme/gtk-3.0/gtk.css;
+    };
+
+    #gtk4 = {
+    #  extraConfig = {};
+    #};
   };
 }
