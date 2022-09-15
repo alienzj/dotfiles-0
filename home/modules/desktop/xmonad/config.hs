@@ -278,9 +278,9 @@ myManageHook :: ManageHook
 myManageHook =
   composeAll
     [ manageDocks,
-      className =? "OpenRGB" --> doFloat,
+      --className =? "OpenRGB" --> doFloat,
       className =? "Lxappearance" --> doFloat,
-      className =? ".solaar-wrapped" --> doFloat,
+      --className =? ".solaar-wrapped" --> doFloat,
       className =? "Psensor" --> doFloat,
       className =? "Nm-connection-editor" --> doFloat,
       className =? "Gddccontrol" --> doFloat,
