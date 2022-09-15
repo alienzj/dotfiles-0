@@ -54,5 +54,10 @@ in
     enable = true;
     browsers = [ "firefox" ];
   };
+
+  #home.packages = with pkgs; [
+  #  firefox-nightly-bin
+  #];
+
 }
 
