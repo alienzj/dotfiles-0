@@ -176,4 +176,12 @@
     extra-sandbox-paths = ["/bin/sh=${pkgs.bash}/bin/sh"];
   };
 
+  # https://discourse.nixos.org/t/stop-pc-from-sleep/5757
+  powerManagement.enable = false;
+
+  systemd.targets.sleep.enable = false;
+  systemd.targets.suspend.enable = false;
+  systemd.targets.hibernate.enable = false;
+  systemd.targets.hybrid-sleep.enable = false;
+
 }
