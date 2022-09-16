@@ -7,6 +7,7 @@
     thunderbird
     libreoffice
     zoom-us
+    pkgs.gnome.evince
   ];
 
   services.syncthing = {
