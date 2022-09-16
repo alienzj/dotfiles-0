@@ -8,6 +8,7 @@
     libreoffice
     zoom-us
     pkgs.gnome.evince
+    transmission
   ];
 
   services.syncthing = {
