@@ -169,7 +169,7 @@ keysToAdd = launchers ++ multimediaKeys ++ layoutRelated
         ( (myModMask .|. controlMask, xK_w),
           spawn openWidgetsPanel
         ),
-        ( (myModMask, xK_1),
+        ( (myModMask, xK_0),
           spawn "sleep 0.2 && flameshot gui"
         ),
         ( (myModMask .|. controlMask, xK_4),
