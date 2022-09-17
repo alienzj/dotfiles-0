@@ -199,4 +199,16 @@
     docker.enableOnBoot = true;
   };
 
+  # flatpak
+  services.flatpak.enable = true;
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+
+  /*
+  flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+  flatpak update
+  flatpak search bustle
+  flatpak install flathub org.freedesktop.Bustle
+  flatpak run org.freedesktop.Bustle
+  */
+
 }
