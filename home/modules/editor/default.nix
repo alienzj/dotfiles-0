@@ -1,7 +1,7 @@
 {
   imports = [
     ./nvim
-    #./emacs
+    ./emacs
     ./vscode
     #./rstudio
   ];

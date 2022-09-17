@@ -22,9 +22,16 @@
 #}
 
 { pkgs, ... }:
+
 {
+  /*
   programs.doom-emacs = {
     enable = true;
     doomPrivateDir = ./doom.d;
+  };
+  */
+
+  programs.emacs = {
+    enable = true;
   };
 }
