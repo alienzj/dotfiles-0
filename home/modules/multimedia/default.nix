@@ -24,6 +24,8 @@
     ];
   };
 
+
+  #https://github.com/nix-community/home-manager/blob/master/modules/services/flameshot.nix
   services.flameshot = {
     enable = true;
     settings = {
@@ -31,12 +33,16 @@
       General = {
         disabledTrayIcon = false;
         showStartupLaunchMessage = true;
-        savePath = "/home/alienzj/downloads/flameshot";
+        savePath = "/home/alienzj/pictures/flameshot";
         saveAsFileExtension = ".png";
         ignoreUpdateToVersion = true;
       }; 
     };
   };
+  #xdg.configFile = mkIf (cfg.settings != { }) {
+  #    "flameshot/flameshot.ini".source = iniFile;
+  #  };
+
 
   # https://github.com/NixOS/nixpkgs/pull/98350
   #spotify.override { deviceScaleFactor = 1.66; }
