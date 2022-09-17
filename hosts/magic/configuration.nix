@@ -11,6 +11,7 @@
       ./modules/desktop
       ./modules/office
       ./modules/game
+      ./modules/wine
     ];
 
   # Setup keyfile
