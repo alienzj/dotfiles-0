@@ -100,10 +100,7 @@ in {
       in ["${automount_opts},credentials=/etc/nixos/smb-secrets"];
   };
 
-
-
   services.gvfs.enable = true;
-
 
   # printing
   services.printing.enable = true;
@@ -111,6 +108,6 @@ in {
   services.avahi.enable = true;
   services.avahi.nssmdns = true;
 
+  programs.system-config-printer.enable = true;
 
 }
-
