@@ -1,7 +1,12 @@
-{ config, pkgs, lib, ... }:
+{ pkgs, lib, config, ... }:
 
 let
   merge = lib.foldr (a: b: a // b) { };
+  #firefoxFlake = firefox-nightly.packages.${pkgs.system};
+  #_firefox = pkgs.firefox-wayland;
+  #_firefox = lib.hiPrio firefoxFlake.firefox-nightly-bin;
+
+  _chromey = pkgs.ungoogled-chromium;
 in
 {
   programs.firefox = {
@@ -44,16 +49,14 @@ in
     };
   };
 
-  
-  # firefox nightly
-  #home.packages = with pkgs; [
-    #latest.firefox-nightly-bin
-  #  firefox-nightly-bin
-  #];
+  home.packages = with pkgs; [
+    #_firefox
+    _chromey
+  ];
 
-  programs.chromium = {
-    enable = true;
-  };
+  #programs.chromium = {
+  #  enable = true;
+  #};
 
   programs.browserpass = {
     enable = true;
