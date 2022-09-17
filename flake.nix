@@ -35,10 +35,16 @@
       url = "github:colemickens/flake-firefox-nightly";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    weixin = {
+      url = "./programs/weixin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { 
     self,
+    weixin,
     firefox-nightly,
     nur,
     taffybar,
@@ -96,6 +102,7 @@
           taffybar.overlay
           #firefox-nightly.overlay
           #(import "${moz-url}/firefox-overlay.nix")
+          (final: prev: { weixinrepo = weixin.packages."${prev.system}";})
         ];
 
         programs.home-manager.enable = true;
