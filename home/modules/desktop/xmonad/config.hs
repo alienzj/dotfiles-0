@@ -169,6 +169,9 @@ keysToAdd = launchers ++ multimediaKeys ++ layoutRelated
         ( (myModMask .|. controlMask, xK_w),
           spawn openWidgetsPanel
         ),
+        ( (myModMask, xK_1),
+          spawn "sleep 0.2 && flameshot gui"
+        ),
         ( (myModMask .|. controlMask, xK_4),
           spawn "sleep 0.2 && scrot -s ~/pictures/scrot/scrot_%Y-%m-%d-%H%M%S.png"
         ),
