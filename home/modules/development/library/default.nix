@@ -36,6 +36,7 @@ let
     scipy
     parso
     twine
+    snakeviz
 
     # other python packages you want
   ]; 
