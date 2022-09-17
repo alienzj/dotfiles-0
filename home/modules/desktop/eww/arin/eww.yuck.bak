@@ -13,33 +13,33 @@
 (defpoll DATE :interval "5s" `date +\"%A, %B %d\"`)
 
 ;; Weather vars
-(defpoll ICON :interval "15m" `custom-script-eww-weather_info --icon`)
-(defpoll TEMP :interval "15m" `custom-script-eww-weather_info --temp`)
-(defpoll HEX :interval "15m" `custom-script-eww-weather_info --hex`)
+(defpoll ICON :interval "15m" `scripts/weather_info --icon`)
+(defpoll TEMP :interval "15m" `scripts/weather_info --temp`)
+(defpoll HEX :interval "15m" `scripts/weather_info --hex`)
 
 ;; Music vars
-(defpoll SONG :interval "1s" `custom-script-eww-music_info --song`)
-(defpoll ARTIST :interval "1s" `custom-script-eww-music_info --artist`)
-(defpoll COVER :interval "1s" `custom-script-eww-music_info --cover`)
-(defpoll STATUS :interval "1s" `custom-script-eww-music_info --status`)
+(defpoll SONG :interval "1s" `scripts/music_info --song`)
+(defpoll ARTIST :interval "1s" `scripts/music_info --artist`)
+(defpoll COVER :interval "1s" `scripts/music_info --cover`)
+(defpoll STATUS :interval "1s" `scripts/music_info --status`)
 
 ;; Mail vars
-(defpoll MAILS :interval "5m" `custom-script-eww-mails`)
+(defpoll MAILS :interval "5m" `scripts/mails`)
 
 ;; Battery vars
-(defpoll BATICON :interval "1m" `custom-script-eww-battery --icon`)
-(defpoll BATPERC :interval "1m" `custom-script-eww-battery --perc`)
+(defpoll BATICON :interval "1m" `scripts/battery --icon`)
+(defpoll BATPERC :interval "1m" `scripts/battery --perc`)
 
 ;; Volume vars
-(defpoll VOLICON :interval "1s" `custom-script-eww-volume --icon`)
-(defpoll VOLUME :interval "1s" `custom-script-eww-volume --get`)
+(defpoll VOLICON :interval "1s" `scripts/volume --icon`)
+(defpoll VOLUME :interval "1s" `scripts/volume --get`)
 
 ;; Network
-(defpoll WIFIICON :interval "10s" `custom-script-eww-check-network --icon`)
-(defpoll NETSTAT :interval "10s" `custom-script-eww-check-network --stat`)
+(defpoll WIFIICON :interval "10s" `scripts/check-network --icon`)
+(defpoll NETSTAT :interval "10s" `scripts/check-network --stat`)
 
 ;; User
-(defvar IMAGE "${DOTFILES}/home/modules/desktop/eww/arin/images/profile.jpg")
+(defvar IMAGE "images/profile.jpg")
 (defpoll USER :interval "10m" `whoami`)
 
 ;; ** Widgets *************************************************************************
@@ -48,21 +48,21 @@
 (defwidget search [] 
 		(box :class "dockbox"
 			(box :orientation "h" :spacing 30 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
-				(button :style "background-image: url('${DOTFILES}/home/modules/desktop/eww/arin/images/icons/search.svg');" :class "genicon" :onclick "custom-script-eww-widget_search --search")
-				(button :style "background-image: url('${DOTFILES}/home/modules/desktop/eww/arin/images/icons/dashboard.svg');" :class "genicon" :onclick "custom-script-eww-widget_search --menu")
+				(button :style "background-image: url('images/icons/search.svg');" :class "genicon" :onclick "scripts/widget_search --search")
+				(button :style "background-image: url('images/icons/dashboard.svg');" :class "genicon" :onclick "scripts/widget_search --menu")
 				(label :class "workspace" :halign "start" :text WMS))))
 
 ;; apps
 (defwidget apps [] 
 		(box :class "dockbox"
 			(box :orientation "h" :spacing 15 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
-				(button :style "background-image: url('${DOTFILES}/home/modules/desktop/eww/arin/images/icons/apps/terminal.png');" :class "appicon" :onclick "custom-script-eww-widget_apps --tr")
-				(button :style "background-image: url('${DOTFILES}/home/modules/desktop/eww/arin/images/icons/apps/firefox.png');" :class "appicon" :onclick "custom-script-eww-widget_apps --ff")
-				(button :style "background-image: url('${DOTFILES}/home/modules/desktop/eww/arin/images/icons/apps/files.png');" :class "appicon" :onclick "custom-script-eww-widget_apps --fm")
-				(button :style "background-image: url('${DOTFILES}/home/modules/desktop/eww/arin/images/icons/apps/notes.png');" :class "appicon" :onclick "custom-script-eww-widget_apps --ge")
-				(button :style "background-image: url('${DOTFILES}/home/modules/desktop/eww/arin/images/icons/apps/discord.png');" :class "appicon" :onclick "custom-script-eww-widget_apps --dc")
-				(button :style "background-image: url('${DOTFILES}/home/modules/desktop/eww/arin/images/icons/apps/reddit.png');" :class "appicon" :onclick "custom-script-eww-widget_apps --rd")
-				(button :style "background-image: url('${DOTFILES}/home/modules/desktop/eww/arin/images/icons/apps/telegram.png');" :class "appicon" :onclick "custom-script-eww-widget_apps --tg"))))
+				(button :style "background-image: url('images/icons/apps/terminal.png');" :class "appicon" :onclick "scripts/widget_apps --tr")
+				(button :style "background-image: url('images/icons/apps/firefox.png');" :class "appicon" :onclick "scripts/widget_apps --ff")
+				(button :style "background-image: url('images/icons/apps/files.png');" :class "appicon" :onclick "scripts/widget_apps --fm")
+				(button :style "background-image: url('images/icons/apps/notes.png');" :class "appicon" :onclick "scripts/widget_apps --ge")
+				(button :style "background-image: url('images/icons/apps/discord.png');" :class "appicon" :onclick "scripts/widget_apps --dc")
+				(button :style "background-image: url('images/icons/apps/reddit.png');" :class "appicon" :onclick "scripts/widget_apps --rd")
+				(button :style "background-image: url('images/icons/apps/telegram.png');" :class "appicon" :onclick "scripts/widget_apps --tg"))))
 
 ;; weather
 (defwidget weather [] 
@@ -83,27 +83,27 @@
 					(label :class "song" :halign "start" :wrap "false" :limit-width 20 :text SONG)
 					(label :class "artist" :halign "start" :wrap "false" :limit-width 20 :text ARTIST)))
 			(box :class "musicbuttons" :orientation "h" :spacing 10 :valign "center" :halign "end" :space-evenly "false" :vexpand "false" :hexpand "false"
-				(button :style "background-image: url('${DOTFILES}/home/modules/desktop/eww/arin/images/icons/music/previous-button.png');" :class "trackbutton" :onclick "custom-script-eww-music_info --prev")
-				(button :style "background-image: url('${STATUS}');" :class "playbutton" :onclick "custom-script-eww-music_info --toggle")
-				(button :style "background-image: url('${DOTFILES}/home/modules/desktop/eww/arin/images/icons/music/next-button.png');" :class "trackbutton" :onclick "custom-script-eww-music_info --next"))))
+				(button :style "background-image: url('images/icons/music/previous-button.png');" :class "trackbutton" :onclick "scripts/music_info --prev")
+				(button :style "background-image: url('${STATUS}');" :class "playbutton" :onclick "scripts/music_info --toggle")
+				(button :style "background-image: url('images/icons/music/next-button.png');" :class "trackbutton" :onclick "scripts/music_info --next"))))
 
 ;; system
 (defwidget system [] 
 		(box :class "dockbox"
 			(box :orientation "h" :spacing 16 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
-				(button :onclick "custom-script-eww-widget_apps --ml"
+				(button :onclick "scripts/widget_apps --ml"
 					(box :orientation "h" :spacing 8 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
-						(box :style "background-image: url('${DOTFILES}/home/modules/desktop/eww/arin/images/icons/gmail.png');" :class "trayicon")
+						(box :style "background-image: url('images/icons/gmail.png');" :class "trayicon")
 							(label :class "mails" :halign "start" :text MAILS)))
-				(button :onclick "custom-script-eww-widget_apps --pow"
+				(button :onclick "scripts/widget_apps --pow"
 					(box :orientation "h" :spacing 8 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
 						(box :style "background-image: url('${BATICON}');" :class "trayicon")
 							(label :class "infotext" :halign "start" :text BATPERC)))
-				(button :onclick "custom-script-eww-volume --toggle"
+				(button :onclick "scripts/volume --toggle"
 					(box :orientation "h" :spacing 8 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
 						(box :style "background-image: url('${VOLICON}');" :class "trayicon")
 							(label :class "infotext" :halign "start" :text VOLUME)))
-				(button :onclick "custom-script-eww-widget_apps --nm"
+				(button :onclick "scripts/widget_apps --nm"
 					(box :orientation "h" :spacing 8 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
 						(box :style "background-image: url('${WIFIICON}');" :class "trayicon")
 							(label :class "infotext" :halign "start" :text NETSTAT)))
