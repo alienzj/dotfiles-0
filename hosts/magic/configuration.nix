@@ -201,7 +201,10 @@
 
   # flatpak
   services.flatpak.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  };
 
   /*
   flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
