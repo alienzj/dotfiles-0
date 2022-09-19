@@ -189,4 +189,13 @@
     docker.enableOnBoot = true;
   };
 
+  services.nextcloud = {                
+    enable = true;                   
+    package = pkgs.nextcloud24;
+    hostName = "localhost";
+    config.adminpassFile = "${pkgs.writeText "adminpass" "helloeniacnext"}";
+  };
+
+  # services.nginx.virtualHosts."localhost".listen = [ { addr = "127.0.0.1"; port = 8080; } ];
+
 }

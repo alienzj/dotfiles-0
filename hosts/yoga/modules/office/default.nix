@@ -110,4 +110,8 @@ in {
 
   programs.system-config-printer.enable = true;
 
+
+  # teamviewer
+  services.teamviewer.enable = true;
+
 }

@@ -87,6 +87,6 @@ in
 
   # https://discourse.nixos.org/t/conditionally-change-list-values/10852
   xresources = {
-    properties = properties_cfg // (if hosts.hostname == "magic" then { "Xft.dpi" = 96; } else { "Xft.dpi" = 101; });
+    properties = properties_cfg // (if hosts.hostname == "magic" then { "Xft.dpi" = 96; } else { "Xft.dpi" = 168; });
   };
 }
