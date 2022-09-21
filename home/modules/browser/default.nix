@@ -51,10 +51,13 @@ in
   };
 
   # https://github.com/colemickens/flake-firefox-nightly/issues/4
-  home.packages = [
+  home.packages = with pkgs; [
     #_firefox
     #firefox-nightly.packages.${pkgs.system}.firefox-nightly-bin
     _chromey
+
+    scrcpy
+
   ];
 
   #programs.chromium = {

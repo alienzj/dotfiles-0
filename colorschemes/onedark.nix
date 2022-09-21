@@ -10,7 +10,8 @@ rec {
   vim-name = "one-nvim";
   vim-statusline = "onedark";
   #gtk-name = "palenight";
-  gtk-name = "Nordic";
+  #gtk-name = "Nordic";
+  gtk-name = "Adwaita";
   #gtk-icon-name = "Moka";
   gtk-icon-name = "Papirus";
   bat-theme-name = "base16";
