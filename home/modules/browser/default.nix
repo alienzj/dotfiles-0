@@ -1,3 +1,4 @@
+#{ pkgs, inputs, firefox-nightly, lib, config, ... }:
 { pkgs, lib, config, ... }:
 
 let
@@ -49,8 +50,10 @@ in
     };
   };
 
-  home.packages = with pkgs; [
+  # https://github.com/colemickens/flake-firefox-nightly/issues/4
+  home.packages = [
     #_firefox
+    #firefox-nightly.packages.${pkgs.system}.firefox-nightly-bin
     _chromey
   ];
 
