@@ -5,5 +5,6 @@
     ./language
     ./library
     #./kernel
+    ./ide
   ];
 }
