@@ -89,6 +89,8 @@
           "steam"
           "steam-original"
           "steam-runtime"
+          "wine-wechat"
+          "wechat-uos"
         ];  
 
         nixpkgs.overlays = [

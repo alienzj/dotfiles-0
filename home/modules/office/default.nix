@@ -5,7 +5,7 @@
     zotero
     calibre
     thunderbird
-    libreoffice
+    libreoffice-fresh
     zoom-us
     pkgs.gnome.evince
     #transmission
