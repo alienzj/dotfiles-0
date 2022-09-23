@@ -46,6 +46,11 @@ in
     vault
   ];
 
+
+  programs.btop = {
+    enable = true;
+  };
+
   programs.tealdeer = {
     enable = true;
     settings = {

@@ -10,6 +10,11 @@
     pkgs.gnome.evince
     #transmission
     transmission-gtk
+    onedrive
+    rclone
+    shadowsocks-libev
+    shadowsocks-rust
+    shadowsocks-v2ray-plugin
   ];
 
   services.syncthing = {

@@ -10,4 +10,6 @@
   services.betterlockscreen = {
     enable = true;
   };
+
+  programs.dircolors.enable = true;
 }
