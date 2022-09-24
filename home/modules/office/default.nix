@@ -46,4 +46,19 @@
     */
   };
 
+  ## https://aur.archlinux.org/cgit/aur.git/tree/shadowsocks-rust@.service?h=shadowsocks-rust
+  /*
+  systemd.services.shadowsocks-rust = {
+    description = "Shadowsocks-Rust Client Service";
+    after = [ "network.target" "network-online.target" ];
+    wantedBy = [ "multi-user.target" ];
+    path = [ pkgs.shadowsocks-rust ];
+    script = ''
+    ssservice local --log-without-time -c /etc/shadowsocks-rust/config.json
+    '';
+    # ssservice local --log-without-time -c /etc/shadowsocks-rust/%i.json
+    serviceConfig.Type = "simple";
+  };
+  */
+
 }

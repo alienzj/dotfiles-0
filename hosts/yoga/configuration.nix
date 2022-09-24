@@ -195,6 +195,10 @@
     package = pkgs.nextcloud24;
     hostName = "localhost";
     config.adminpassFile = "${pkgs.writeText "adminpass" "helloeniacnext"}";
+
+    home = "/home/alienzj/arch/nextcloud";
+    https = true;
+    maxUploadSize = "2G";
   };
 
   # services.nginx.virtualHosts."localhost".listen = [ { addr = "127.0.0.1"; port = 8080; } ];

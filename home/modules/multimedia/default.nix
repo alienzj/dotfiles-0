@@ -4,14 +4,21 @@
 {
   home.packages = with pkgs; [
     vlc
+    
     gimp-with-plugins
     inkscape-with-extensions
     blender
+
+    amule
+
+    #nur.repos.rewine.lx-music-desktop
+    nur.repos.yes.lx-music-desktop
+    #nur.repos.eh5.netease-cloud-music
+
     spotify
     #(wrapbin spotify "/bin/spotify" "--force-device-scale-factor 42")
     #(spotify.override { deviceScaleFactor = 1.66; })
-    netease-cloud-music-gtk
-    amule
+ 
   ];
 
   programs.mpv = {
