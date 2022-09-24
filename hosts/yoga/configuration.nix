@@ -169,7 +169,7 @@
   nix.settings = {
     experimental-features = [ "nix-command" "flakes" ];
     extra-sandbox-paths = ["/bin/sh=${pkgs.bash}/bin/sh"];
-    substituters = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
+    #substituters = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
   };
 
   # https://discourse.nixos.org/t/stop-pc-from-sleep/5757
