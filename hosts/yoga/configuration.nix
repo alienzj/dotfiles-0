@@ -169,7 +169,7 @@
   nix.settings = {
     experimental-features = [ "nix-command" "flakes" ];
     extra-sandbox-paths = ["/bin/sh=${pkgs.bash}/bin/sh"];
-    #substituters = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
+    substituters = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
   };
 
   # https://discourse.nixos.org/t/stop-pc-from-sleep/5757
@@ -206,6 +206,6 @@
   # services.nginx.virtualHosts."localhost".listen = [ { addr = "127.0.0.1"; port = 8080; } ];
 
   networking.proxy.default = "socks5://127.0.0.1:1080/";
-  networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+  networking.proxy.noProxy = "127.0.0.1,localhost";
 
 }
