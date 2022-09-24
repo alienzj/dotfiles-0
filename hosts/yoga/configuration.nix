@@ -190,13 +190,15 @@
     docker.enableOnBoot = true;
   };
 
+  # https://github.com/NixOS/nixpkgs/blob/master/nixos/modules/services/web-apps/nextcloud.nix
+  # https://jacobneplokh.com/how-to-setup-nextcloud-on-nixos/
   services.nextcloud = {                
     enable = true;                   
     package = pkgs.nextcloud24;
     hostName = "localhost";
     config.adminpassFile = "${pkgs.writeText "adminpass" "helloeniacnext"}";
 
-    home = "/home/alienzj/arch/nextcloud";
+    #home = "/home/alienzj/arch/nextcloud";
     https = true;
     maxUploadSize = "2G";
   };
