@@ -36,7 +36,8 @@
       bungcip.better-toml
 
       # theme
-      mskelton.one-dark-theme
+      #mskelton.one-dark-theme
+      zhuangtongfa.material-theme
 
       # csv
       mechatroner.rainbow-csv
@@ -84,7 +85,8 @@
       "update.channel" = "none";
       "window.dialogStyle" = "custom";
       "window.titleBarStyle" = "custom";
-      "workbench.colorTheme" = "One Dark";
+      "workbench.colorTheme" = "One Dark Pro";
+      /*
       "editor.tokenColorCustomizations" = {
         "textMateRules" = [
           {
@@ -123,6 +125,7 @@
           }
         ];
       };
+      */
     };
   };
 }

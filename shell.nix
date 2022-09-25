@@ -1,3 +1,5 @@
+# https://ghedam.at/15978/an-introduction-to-nix-shell
+
 { pkgs ? import <nixpkgs> {}}:
 
 let

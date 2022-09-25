@@ -33,6 +33,10 @@
 
     # R
     #R 
+
+    # Julia
+    #julia # broken
+    #julia-lts
     
     # Rust
     cargo
