@@ -2,7 +2,7 @@
   imports = [
     ./nvim
     ./emacs
-    #./vscode
+    ./vscode
     #./rstudio
   ];
 }
