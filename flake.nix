@@ -127,6 +127,7 @@
           ./home/modules/editor
           ./home/modules/development
           #./home/modules/game
+          ./home/modules/language
         ];
       };
 
