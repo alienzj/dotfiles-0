@@ -134,6 +134,15 @@
     in
     {
       nixosConfigurations = {
+        eniac = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            dedsec-grub-theme.nixosModule
+            ./hosts/eniac/configuration.nix
+            color-scheme
+          ];
+        };
+
         yoga = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
@@ -151,9 +160,20 @@
             color-scheme
           ];
         };
+
       };
 
       homeConfigurations = {
+        eniac = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages."x86_64-linux";
+          modules = [
+            home-common
+            home-linux
+            nix-doom-emacs.hmModule
+            color-scheme
+          ];
+        };
+
         yoga = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages."x86_64-linux";
           modules = [
@@ -173,6 +193,7 @@
             color-scheme
           ];
         };
+
       };
     };
 }
