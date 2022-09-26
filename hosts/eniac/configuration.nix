@@ -61,8 +61,8 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  #networking.proxy.default = "socks5://127.0.0.1:1080/";
-  #networking.proxy.noProxy = "127.0.0.1,localhost";
+  networking.proxy.default = "socks5://127.0.0.1:1080/";
+  networking.proxy.noProxy = "127.0.0.1,localhost";
 
   # Set your time zone.
   time.timeZone = "Asia/Hong_Kong";
