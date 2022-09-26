@@ -46,7 +46,7 @@
   boot.initrd.luks.devices."luks-89db3266-1e79-4fd7-ba41-ebfd853aa9d6".keyFile = "/crypto_keyfile.bin";
 
   # boot.kernelModules = [ "i2c-dev" "i2c-piix4" "kvm-amd" ];
-  boot.initrd.kernelModules = [ "amdgpu" ];
+  # boot.initrd.kernelModules = [ "amdgpu" ];
 
   networking.hostName = "eniac"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.

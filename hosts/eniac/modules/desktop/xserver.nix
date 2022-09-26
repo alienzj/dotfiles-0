@@ -8,7 +8,7 @@
     layout = "us";
     #xkbOptions = "caps:swapescape";
     xkbVariant = "";
-    videoDrivers = [ "amdgpu" ];
+    videoDrivers = [ "nvidia" ];
     #autoRepeatDelay = 200;
     #autoRepeatInterval = 20;
 
