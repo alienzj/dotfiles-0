@@ -44,6 +44,7 @@ in
     terraform
     vagrant
     vault
+    gparted
   ];
 
 
