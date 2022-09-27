@@ -77,6 +77,7 @@ in {
 */
 
 {
+  /*
   # For mount.cifs, required unless domain name resolution is not needed.
   environment.systemPackages = [ pkgs.cifs-utils ];
 
@@ -99,6 +100,8 @@ in {
 
       in ["${automount_opts},credentials=/etc/nixos/smb-secrets"];
   };
+
+  */
 
   services.gvfs.enable = true;
 
