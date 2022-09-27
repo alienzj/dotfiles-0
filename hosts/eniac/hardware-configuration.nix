@@ -34,7 +34,7 @@
     { device = "/dev/disk/by-uuid/57f1899f-eda1-44bb-a9af-2b974164fb2a";
       fsType = "ext4";
       #options = [ "mode=755" "gid=100" "uid=1000" ];
-      options = [ "defaults" "users" "rw" "utf8" "noauto" "umask=000" ];
+      options = [ "defaults" "users" "rw" ];
     };
 
   boot.initrd.luks.devices."cryptdata".device = "/dev/disk/by-uuid/0d505912-468c-400b-97ea-ced15cd6d45f";
