@@ -128,6 +128,7 @@
           ./home/modules/development
           #./home/modules/game
           ./home/modules/language
+          ./home/modules/science
         ];
       };
 

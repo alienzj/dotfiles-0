@@ -15,6 +15,15 @@ let
       ggtreeExtra
       MicrobiotaProcess
       dada2
+      DECIPHER
+      ggpubr
+      ggplotify
+      ggalluvial
+      ggstar
+      forcats
+      tidytree
+      readxl
+      writexl
     ];
   };
 
@@ -31,6 +40,15 @@ let
       ggtreeExtra
       MicrobiotaProcess
       dada2
+      DECIPHER
+      ggpubr
+      ggplotify
+      ggalluvial
+      ggstar
+      forcats
+      tidytree
+      readxl
+      writexl
     ];
   };
 
@@ -83,6 +101,8 @@ pkgs.mkShell {
     # R
     zj-R-with-packages
     zj-RStudio-with-packages
+
+    #quarto
 
     # python
     zj-python-with-packages
