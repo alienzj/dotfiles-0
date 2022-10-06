@@ -78,7 +78,10 @@ in {
 
 {
   # For mount.cifs, required unless domain name resolution is not needed.
-  environment.systemPackages = [ pkgs.cifs-utils ];
+  environment.systemPackages = [ 
+    pkgs.cifs-utils
+    pkgs.quarto
+  ];
 
   fileSystems."/mnt/share/MagIC/Public" = {
       device = "//hkfile.magic.local/Share/Public";
