@@ -11,6 +11,10 @@ let
       shiny
       leaflet
       robservable
+      ggtree
+      ggtreeExtra
+      MicrobiotaProcess
+      dada2
     ];
   };
 
@@ -23,6 +27,10 @@ let
       shiny
       leaflet
       robservable
+      ggtree
+      ggtreeExtra
+      MicrobiotaProcess
+      dada2
     ];
   };
 
@@ -75,9 +83,9 @@ pkgs.mkShell {
     # R
     zj-R-with-packages
     zj-RStudio-with-packages
+    quarto
 
     # python
     zj-python-with-packages
   ];
-
 }
