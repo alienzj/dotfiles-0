@@ -4,7 +4,7 @@
   home.packages = with pkgs; [
     #cutadapt
     megahit
-    spades
+    #spades
     bwa
     bowtie2
   ];
