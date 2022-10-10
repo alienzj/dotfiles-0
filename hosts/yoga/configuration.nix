@@ -205,7 +205,7 @@
 
   # services.nginx.virtualHosts."localhost".listen = [ { addr = "127.0.0.1"; port = 8080; } ];
 
-  networking.proxy.default = "socks5://127.0.0.1:1080/";
-  networking.proxy.noProxy = "127.0.0.1,localhost";
+  #networking.proxy.default = "socks5://127.0.0.1:1080/";
+  #networking.proxy.noProxy = "127.0.0.1,localhost";
 
 }
