@@ -1,7 +1,11 @@
-{ pkgs, ... };
+{ pkgs, ... }:
 
 {
   home.packages = with pkgs; [
-    cutadapt
+    #cutadapt
+    megahit
+    spades
+    bwa
+    bowtie2
   ];
 }
