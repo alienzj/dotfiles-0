@@ -92,7 +92,7 @@
           "wine-wechat"
           "wechat-uos"
           "pdfstudio"
-          "notion-app-enhanced"
+          "notion-app-enhanced-v2.0.18"
         ];  
 
         nixpkgs.overlays = [
