@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  home.packages = withk pkgs; [
+  home.packages = with pkgs; [
     logseq
     notion-app-enhanced
   ];
