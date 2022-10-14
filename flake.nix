@@ -91,6 +91,8 @@
           "steam-runtime"
           "wine-wechat"
           "wechat-uos"
+          "pdfstudio"
+          "notion-app-enhanced"
         ];  
 
         nixpkgs.overlays = [
@@ -129,6 +131,7 @@
           #./home/modules/game
           ./home/modules/language
           ./home/modules/science
+          ./home/modules/noter
         ];
       };
 

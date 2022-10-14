@@ -15,6 +15,16 @@
     shadowsocks-libev
     shadowsocks-rust
     shadowsocks-v2ray-plugin
+
+    # pdf
+    # https://www.fosslinux.com/49661/merge-pdf-files-on-linux.htm
+    pdftk
+    pdfstudio
+    pdfslicer
+    pdfmixtool
+    pdfarranger
+    pdfsam-basic
+    wkhtmltopdf
   ];
 
   services.syncthing = {
