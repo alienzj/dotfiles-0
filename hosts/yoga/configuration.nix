@@ -120,7 +120,7 @@
     description = "Jie Zhu";
     #shell = pkgs.fish;
     shell = pkgs.zsh;
-    extraGroups = [ "networkmanager" "wheel" "audio" "docker" "qemu-libvirtd" "libvirtd" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "docker" "qemu-libvirtd" "libvirtd" "adbusers" ];
   };
   users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
 
@@ -208,5 +208,6 @@
 
   #networking.proxy.default = "socks5://127.0.0.1:1080/";
   #networking.proxy.noProxy = "127.0.0.1,localhost";
+  programs.adb.enable = true;
 
 }
