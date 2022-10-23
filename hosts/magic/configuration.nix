@@ -147,7 +147,6 @@
     git
     binutils
     coreutils
-    quarto
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
