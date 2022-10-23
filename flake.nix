@@ -132,6 +132,7 @@
           ./home/modules/language
           ./home/modules/science
           ./home/modules/noter
+          ./home/modules/android
         ];
       };
 
