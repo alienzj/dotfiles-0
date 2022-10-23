@@ -131,7 +131,7 @@
     description = "Jie Zhu";
     #shell = pkgs.fish;
     shell = pkgs.zsh;
-    extraGroups = [ "networkmanager" "wheel" "audio" "docker" "qemu-libvirtd" "libvirtd" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "docker" "qemu-libvirtd" "libvirtd" "adbusers" ];
   };
   users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
 
@@ -214,4 +214,6 @@
   flatpak run org.freedesktop.Bustle
   */
 
+  # android
+  programs.adb.enable = true;
 }
