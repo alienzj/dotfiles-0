@@ -30,4 +30,8 @@
       color15 = "${colorscheme.bright-white}";
     };
   };
+
+  programs.alacritty = {
+    enable = true;
+  };
 }
