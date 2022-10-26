@@ -7,8 +7,8 @@ let
   #_firefox = pkgs.firefox-wayland;
   #_firefox = lib.hiPrio firefoxFlake.firefox-nightly-bin;
 
-  _chromey = pkgs.ungoogled-chromium;
 in
+
 {
   programs.firefox = {
     enable = true;
@@ -51,18 +51,23 @@ in
   };
 
   # https://github.com/colemickens/flake-firefox-nightly/issues/4
-  home.packages = with pkgs; [
+  #home.packages = with pkgs; [
     #_firefox
     #firefox-nightly.packages.${pkgs.system}.firefox-nightly-bin
-    _chromey
+  #];
 
-    scrcpy
-
-  ];
-
-  #programs.chromium = {
-  #  enable = true;
-  #};
+  programs.chromium = {
+    enable = true;
+    #pkgs = pkgs.ungoogled-chromium;
+    extensions = [
+      "aapbdbdomjkkjkaonfhkkikfgjllcleb" # Google translate
+      "knheggckgoiihginacbkhaalnibhilkk" # Notion Web Clipper 
+      "chlffgpmiacpedhhbkiomidkjlcfhogd" # pushbullet
+      "mbniclmhobmnbdlbpiphghaielnnpgdp" # lightshot
+      "gcbommkclmclpchllfjekcdonpmejbdp" # https everywhere
+      "cjpalhdlnbpafiamejdnhcphjbkeiagm" # ublock origin
+    ];
+  };
 
   programs.browserpass = {
     enable = true;
@@ -71,8 +76,5 @@ in
       "chromium"
     ];
   };
-
-
-
 }
 
