@@ -21,17 +21,25 @@
 #  home.packages = [ doom-emacs ];
 #}
 
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
-  /*
   programs.doom-emacs = {
     enable = true;
     doomPrivateDir = ./doom.d;
+    emacsPackagesOverlay = self: super: {
+      magit-delta = super.magit-delta.overrideAttrs (esuper: {
+        buildInputs = esuper.buildInputs ++ [ pkgs.git ];
+      });
+    };
   };
-  */
 
-  programs.emacs = {
-    enable = true;
-  };
+  #programs.emacs = {
+  #  enable = true;
+  #};
+
+  #services.emacs = {
+  #  enable = true;
+  #  #package = doom-emacs; # Not needed if you're using the Home-Manager module instead
+  #};
 }

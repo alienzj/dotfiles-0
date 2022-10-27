@@ -26,6 +26,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    emacs-overlay = {
+      url = "github:nix-community/emacs-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     taffybar = {
       url = "github:sherubthakur/taffybar";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -46,6 +51,7 @@
     home-manager,
     dedsec-grub-theme,
     nix-doom-emacs,
+    emacs-overlay,
     ...
   }:
     let
@@ -98,6 +104,7 @@
         nixpkgs.overlays = [
           nur.overlay
           taffybar.overlay
+          emacs-overlay.overlay
           #firefox-nightly.overlay
           #(import "${moz-url}/firefox-overlay.nix")
         ];
