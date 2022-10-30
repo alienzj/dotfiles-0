@@ -7,5 +7,6 @@
     #spades
     bwa
     bowtie2
+    igv
   ];
 }

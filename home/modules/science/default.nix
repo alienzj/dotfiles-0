@@ -3,5 +3,6 @@
 {
   imports = [
     ./bioinfo
+    ./visualization
   ];
 }
