@@ -1,3 +1,5 @@
+{ config, pkgs, ... }:
+
 {
   programs.git = {
     enable = true;
@@ -24,4 +26,10 @@
   programs.gitui = {
     enable = true;
   };
+
+  
+  home.packages = with pkgs; [
+    git-crypt
+  ];
+
 }

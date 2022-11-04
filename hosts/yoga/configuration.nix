@@ -210,4 +210,11 @@
   #networking.proxy.noProxy = "127.0.0.1,localhost";
   programs.adb.enable = true;
 
+  
+  # GnuPG
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+  };
+  services.pcscd.enable = true;
 }
