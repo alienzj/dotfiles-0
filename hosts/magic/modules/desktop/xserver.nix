@@ -67,4 +67,9 @@
   #services.xrdp.defaultWindowManager = ".hm-session";
   networking.firewall.allowedTCPPorts = [ 3389 ];
   # Soon: services.xrdp.openFirewall = true;
+
+  environment.systemPackages = with pkgs; [
+    freerdp 
+    remminna
+  ];
 }
