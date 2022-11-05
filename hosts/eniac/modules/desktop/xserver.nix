@@ -66,11 +66,12 @@
 
   services.xrdp.enable = true;
   #services.xrdp.defaultWindowManager = "xmonad";
+  services.xrdp.defaultWindowManager = "home-manager";
   #services.xrdp.defaultWindowManager = "$HOME/.hm-xsession";
-  services.xrdp.defaultWindowManager = "${pkgs.writeScript "xrdp-xsession-xmonad" ''
-    ${pkgs.runtimeShell} $HOME/.hm-xsession &
-    waitPID=$!
- ''}";
+  #services.xrdp.defaultWindowManager = "${pkgs.writeScript "xrdp-xsession-xmonad" ''
+  #  ${pkgs.runtimeShell} $HOME/.hm-xsession &
+  #  waitPID=$!
+  #''}";
     #${lib.getBin pkgs.dbus}/bin/dbus-update-activation-environment --systemd --all
     #test -n "$waitPID" && wait "$waitPID"
     #/run/current-system/systemd/bin/systemctl --user stop graphical-session.target
