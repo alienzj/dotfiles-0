@@ -5,10 +5,10 @@ with lib.hm.gvariant;
 
 {
   dconf.settings = {
-    "org/gnome/desktop/background" = {
-      picture-options = "zoom";
-      picture-uri = "file://${../../data}/wallpapers/0127_girl-rain-koba-sewer.jpg";
-    };
+    #"org/gnome/desktop/background" = {
+    #  picture-options = "zoom";
+    #  picture-uri = "file://${../../data}/wallpapers/0127_girl-rain-koba-sewer.jpg";
+    #};
 
     #"org/gnome/desktop/interface" = {
     #  gtk-theme = "Adwaita";

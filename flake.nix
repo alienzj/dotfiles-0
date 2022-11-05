@@ -67,11 +67,12 @@
       color-scheme = { lib, ... }:
       {
         _module.args = {
-          colorscheme = import ./colorschemes/tokyonight.nix;
+          #colorscheme = import ./colorschemes/tokyonight.nix;
+          colorscheme = import ./colorschemes/onedark.nix;
+          #colorscheme = import ./colorschemes/tokyonight.nix;
         };
       };
 
-      #colorscheme = import ./colorschemes/tokyonight.nix;
       home-common = { lib, ... }:
       {
 
