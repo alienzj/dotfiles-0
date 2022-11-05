@@ -70,6 +70,6 @@
 
   environment.systemPackages = with pkgs; [
     freerdp 
-    remminna
+    remmina
   ];
 }
