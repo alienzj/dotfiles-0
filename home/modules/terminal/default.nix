@@ -8,6 +8,7 @@
       scrollback_lines = 10000;
       input_delay = 1;
       enable_audio_bell = false;
+      copy_on_select = true;
 
       foreground = "${colorscheme.fg-primary}";
       background = "${colorscheme.bg-primary}";
