@@ -62,4 +62,16 @@
 
 
   programs.dconf.enable = true;
+
+
+  services.xrdp.enable = true;
+  #services.xrdp.defaultWindowManager = "xmonad";
+  services.xrdp.defaultWindowManager = "$HOME/.hm-session";
+  networking.firewall.allowedTCPPorts = [ 3389 ];
+  # Soon: services.xrdp.openFirewall = true;
+
+  environment.systemPackages = with pkgs; [
+    freerdp 
+    remmina
+  ];
 }
