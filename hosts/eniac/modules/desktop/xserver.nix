@@ -66,7 +66,7 @@
 
   services.xrdp.enable = true;
   #services.xrdp.defaultWindowManager = "xmonad";
-  services.xrdp.defaultWindowManager = "$HOME/.hm-session";
+  services.xrdp.defaultWindowManager = "$HOME/.hm-xsession";
   networking.firewall.allowedTCPPorts = [ 3389 ];
   # Soon: services.xrdp.openFirewall = true;
 
